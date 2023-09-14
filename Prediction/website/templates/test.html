@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <title>Elephant Location</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="title">Elephant Location Predictors</div>
+        <form action="/" method="POST">
+            <div class="form">
+                <div class="inputfield">
+                    <label for="elephantname">Elephant Name</label>
+                    <div class = "custom_select">
+                        <select name="elephantname" id="elephantname">
+                            <option value="" selected hidden>Select</option>
+                            <option value="agboo">Agboo</option>
+                            <option value="asala1">Asala First</option>
+                            <option value="asala2">Asala Second</option>
+                            <option value="banu">Banu</option>
+                            <option value="barana">Barana</option>
+                            <option value="chandi">Chandi</option>
+                            <option value="deega1">Deega First</option>
+                            <option value="deega2">Deega Second</option>
+                            <option value="gamunu">Gamunu</option>
+                            <option value="kawantissa">Kawantissa</option>
+                            <option value="mahasen">Mahasen</option>
+                            <option value="neela">Neela</option>
+                            <option value="rewatha">Rewatha</option>
+                            <option value="sumedha">Sumedha</option>
+                            <option value="unicorn">Unicorn</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="inputfield">
+                    <label for="year">Year</label>
+                    <input class="input" type="text" name="year" required>
+                </div>
+                <div class="inputfield">
+                    <label for="month">Month</label>
+                    <div class = "custom_select">
+                        <select name="month" id="month">
+                            <option value="" selected hidden>Select</option>
+                            <option value="april">April</option>
+                            <option value="august">August</option>
+                            <option value="december">December</option>
+                            <option value="februay">Februay</option>
+                            <option value="january">January</option>
+                            <option value="july">July</option>
+                            <option value="june">June</option>
+                            <option value="march">March</option>
+                            <option value="may">May</option>
+                            <option value="november">November</option>
+                            <option value="october">October</option>
+                            <option value="september">September</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="inputfield">
+                    <label for="weatherchanges">Weather Changes</label>
+                    <div class = "custom_select">
+                        <select name="weatherchanges" id="weatherchanges">
+                            <option value="" selected hidden>Select</option>
+                            <option value="northeast-monsoon">Northeast-Monsoon</option>
+                            <option value="first inter-monsoon">First Inter-Monsoon</option>
+                            <option value="southwest-monsoon">Southwest-Monsoon</option>
+                            <option value="second inter-monsoon">Second Inter-Monsoon</option>
+                        </select> 
+                    </div>
+                </div>
+    
+                <div class="inputfield">
+                    <input class="btn" type="submit" value="Find Location">
+                </div>
+            </div>
+        </form>
+
+        <div class="result">
+            {% if pred_value != 0 %}
+            <p>Grama Niladhari Division : {{pred_value}}</p>
+            <p>Elephant Located Area : {{location_name}}</p>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

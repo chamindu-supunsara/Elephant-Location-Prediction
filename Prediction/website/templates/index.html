@@ -2,88 +2,173 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/style.css">
-    <title>Elephant Location</title>
+    <title>Find Location</title>
 </head>
 <body>
-    <div class="wrapper">
-        <div class="title">Elephant Location Predictors</div>
-        <form action="/" method="POST">
-            <div class="form">
-                <div class="inputfield">
-                    <label for="elephantname">Elephant Name</label>
-                    <div class = "custom_select">
-                        <select name="elephantname" id="elephantname">
-                            <option value="" selected hidden>Select</option>
-                            <option value="agboo">Agboo</option>
-                            <option value="asala1">Asala First</option>
-                            <option value="asala2">Asala Second</option>
-                            <option value="banu">Banu</option>
-                            <option value="barana">Barana</option>
-                            <option value="chandi">Chandi</option>
-                            <option value="deega1">Deega First</option>
-                            <option value="deega2">Deega Second</option>
-                            <option value="gamunu">Gamunu</option>
-                            <option value="kawantissa">Kawantissa</option>
-                            <option value="mahasen">Mahasen</option>
-                            <option value="neela">Neela</option>
-                            <option value="rewatha">Rewatha</option>
-                            <option value="sumedha">Sumedha</option>
-                            <option value="unicorn">Unicorn</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="inputfield">
-                    <label for="year">Year</label>
-                    <input class="input" type="text" name="year" required>
-                </div>
-                <div class="inputfield">
-                    <label for="month">Month</label>
-                    <div class = "custom_select">
-                        <select name="month" id="month">
-                            <option value="" selected hidden>Select</option>
-                            <option value="april">April</option>
-                            <option value="august">August</option>
-                            <option value="december">December</option>
-                            <option value="februay">Februay</option>
-                            <option value="january">January</option>
-                            <option value="july">July</option>
-                            <option value="june">June</option>
-                            <option value="march">March</option>
-                            <option value="may">May</option>
-                            <option value="november">November</option>
-                            <option value="october">October</option>
-                            <option value="september">September</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="inputfield">
-                    <label for="weatherchanges">Weather Changes</label>
-                    <div class = "custom_select">
-                        <select name="weatherchanges" id="weatherchanges">
-                            <option value="" selected hidden>Select</option>
-                            <option value="northeast-monsoon">Northeast-Monsoon</option>
-                            <option value="first inter-monsoon">First Inter-Monsoon</option>
-                            <option value="southwest-monsoon">Southwest-Monsoon</option>
-                            <option value="second inter-monsoon">Second Inter-Monsoon</option>
-                        </select> 
-                    </div>
-                </div>
-    
-                <div class="inputfield">
-                    <input class="btn" type="submit" value="Find Location">
-                </div>
+    <section>
+        <div class="contact-container">
+            <div class="form-container">
+                <h3>Predict Elephant Location</h3>
+                <form action="/" method="POST" class="contact-form">
+                    
+                        <label for="elephantname">Elephant Name</label>
+                        <div class = "custom_select">
+                            <select name="elephantname" id="elephantname" required>
+                                <option value="" selected hidden>Select</option>
+                                <option value="agboo">Agboo</option>
+                                <option value="asala1">Asala First</option>
+                                <option value="asala2">Asala Second</option>
+                                <option value="banu">Banu</option>
+                                <option value="barana">Barana</option>
+                                <option value="chandi">Chandi</option>
+                                <option value="deega1">Deega First</option>
+                                <option value="deega2">Deega Second</option>
+                                <option value="gamunu">Gamunu</option>
+                                <option value="kawantissa">Kawantissa</option>
+                                <option value="mahasen">Mahasen</option>
+                                <option value="neela">Neela</option>
+                                <option value="rewatha">Rewatha</option>
+                                <option value="sumedha">Sumedha</option>
+                                <option value="unicorn">Unicorn</option>
+                            </select>
+                        </div>
+                        
+                        <label for="year">Year</label>
+                        <div class="custom_select">
+                            <input class="input" placeholder="Type year" type="text" name="year" id="year" required oninput="validateYear()">
+                        </div>
+                        
+                        <div id="toast" class="toast"></div>  
+                        
+                            <label for="month">Month</label>
+                            <div class = "custom_select">
+                                <select name="month" id="month" required>
+                                    <option value="" selected hidden>Select</option>
+                                    <option value="april">April</option>
+                                    <option value="august">August</option>
+                                    <option value="december">December</option>
+                                    <option value="februay">Februay</option>
+                                    <option value="january">January</option>
+                                    <option value="july">July</option>
+                                    <option value="june">June</option>
+                                    <option value="march">March</option>
+                                    <option value="may">May</option>
+                                    <option value="november">November</option>
+                                    <option value="october">October</option>
+                                    <option value="september">September</option>
+                                </select>
+                            </div>
+                        
+                        
+                            <label for="weatherchanges">Weather Changes</label>
+                            <div class = "custom_select">
+                                <select name="weatherchanges" id="weatherchanges" required>
+                                    <option value="" selected hidden>Select</option>
+                                    <option value="northeast-monsoon">Northeast-Monsoon</option>
+                                    <option value="first inter-monsoon">First Inter-Monsoon</option>
+                                    <option value="southwest-monsoon">Southwest-Monsoon</option>
+                                    <option value="second inter-monsoon">Second Inter-Monsoon</option>
+                                </select> 
+                            </div>
+                        
+                        <input type="submit" value="Find Location" class="send-button">
+                        <div class="result">
+                            {% if pred_value != 0 %}
+                            <p>Grama Niladhari Division : <span id="division">{{pred_value}}</span></p>
+                            <p>Elephant Located Area : <span id="locationName">{{location_name}}</span></p>
+                            {% endif %}
+                        </div>
+                </form>
             </div>
-        </form>
-
-        <div class="result">
-            {% if pred_value != 0 %}
-            <p>Grama Niladhari Division : {{pred_value}}</p>
-            <p>Elephant Located Area : {{location_name}}</p>
-            {% endif %}
+            <div class="map" id="map"></div>
         </div>
-    </div>
-</body>
+    </section>
+</body>  
+<script>
+    function validateYear() {
+        const yearInput = document.getElementById("year");
+        const yearPattern = /^\d{4}$/;
+
+        if (!yearPattern.test(yearInput.value)) {
+            showToast("Please enter a valid 4-digit year.");
+            yearInput.setCustomValidity("Invalid year format");
+        } else {
+            showToast("");
+            yearInput.setCustomValidity("");
+        }
+    }
+
+    function showToast(message) {
+        const toast = document.getElementById("toast");
+        toast.textContent = message;
+
+        if (message) {
+            toast.style.display = "block";
+        } else {
+            toast.style.display = "none";
+        }
+    }
+
+    function initMap() {
+        let locationName = "kekirawa";
+
+        const locationNameElement = document.getElementById("locationName");
+        if (locationNameElement) {
+            locationName = locationNameElement.textContent;
+        } else {
+            console.log("Default Location is Kekirawa Town");
+        }
+
+        const defaultLatitude =  8.0210;
+        const defaultLongitude = 80.8258;
+
+        const map = new google.maps.Map(document.getElementById("map"), {
+            center: { lat: defaultLatitude, lng: defaultLongitude },
+            zoom: 14,
+            mapTypeId: "terrain"
+        });
+
+        const geocoder = new google.maps.Geocoder();
+        geocoder.geocode({ address: locationName }, (results, status) => {
+            if (status === "OK" && results.length > 0) {
+                const location = results[0].geometry.location;
+                map.setCenter(location);
+
+                const marker = new google.maps.Marker({
+                    map: map,
+                    position: location,
+                    title: locationName
+                });
+
+                const radius = 0.015;
+                const numPoints = 50;
+
+                const polygonCoordinates = [];
+                for (let i = 0; i < numPoints; i++) {
+                    const angle = (i / numPoints) * 2 * Math.PI;
+                    const x = location.lat() + radius * Math.cos(angle);
+                    const y = location.lng() + radius * Math.sin(angle);
+                    polygonCoordinates.push({ lat: x, lng: y });
+                }
+
+                const locationArea = new google.maps.Polygon({
+                    paths: polygonCoordinates,
+                    strokeColor: "#004225", 
+                    strokeOpacity: 0.2,
+                    strokeWeight: 2,
+                    fillColor: "#004225", 
+                    fillOpacity: 0.15,
+                });
+
+                locationArea.setMap(map);
+            } else {
+                console.error("Geocoding failed: " + status);
+            }
+        });
+    }
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA4KQ2y8sUFaRNfhcSpsbwhOigYvkpda0k&callback=initMap" async defer></script>
 </html>
