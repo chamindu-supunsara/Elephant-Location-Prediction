@@ -46,18 +46,18 @@
                             <div class = "custom_select">
                                 <select name="month" id="month" required>
                                     <option value="" selected hidden>Select</option>
-                                    <option value="april">April</option>
-                                    <option value="august">August</option>
-                                    <option value="december">December</option>
-                                    <option value="februay">Februay</option>
                                     <option value="january">January</option>
-                                    <option value="july">July</option>
-                                    <option value="june">June</option>
+                                    <option value="february">Februay</option>
                                     <option value="march">March</option>
+                                    <option value="april">April</option>
                                     <option value="may">May</option>
-                                    <option value="november">November</option>
-                                    <option value="october">October</option>
+                                    <option value="june">June</option>
+                                    <option value="july">July</option>
+                                    <option value="august">August</option>
                                     <option value="september">September</option>
+                                    <option value="october">October</option>
+                                    <option value="november">November</option>
+                                    <option value="december">December</option>
                                 </select>
                             </div>
                         
@@ -87,6 +87,56 @@
     </section>
 </body>  
 <script>
+    document.getElementById('month').addEventListener('change', function() {
+    var selectedMonth = this.value;
+    var weatherChangesSelect = document.getElementById('weatherchanges');
+
+    if (selectedMonth === 'january' || selectedMonth === 'february' || selectedMonth === 'december') {
+        // Disable options other than 'northeast-monsoon'
+        for (var i = 0; i < weatherChangesSelect.options.length; i++) {
+            var option = weatherChangesSelect.options[i];
+            if (option.value !== 'northeast-monsoon') {
+                option.disabled = true;
+            }
+        }
+    } else if (selectedMonth === 'march' || selectedMonth === 'april') {
+        // Enable only 'first inter-monsoon' and disable other options
+        for (var i = 0; i < weatherChangesSelect.options.length; i++) {
+            var option = weatherChangesSelect.options[i];
+            if (option.value === 'first-inter-monsoon') {
+                option.disabled = false;
+            } else {
+                option.disabled = true;
+            }
+        }
+    } else if (selectedMonth === 'may' || selectedMonth === 'june' || selectedMonth === 'july' || selectedMonth === 'august' || selectedMonth === 'september') {
+        // Enable only 'southwest-monsoon' and disable other options
+        for (var i = 0; i < weatherChangesSelect.options.length; i++) {
+            var option = weatherChangesSelect.options[i];
+            if (option.value === 'southwest-monsoon') {
+                option.disabled = false;
+            } else {
+                option.disabled = true;
+            }
+        }
+    } else if (selectedMonth === 'october' || selectedMonth === 'november') {
+        // Enable only 'second inter-monsoon' and disable other options
+        for (var i = 0; i < weatherChangesSelect.options.length; i++) {
+            var option = weatherChangesSelect.options[i];
+            if (option.value === 'second-inter-monsoon') {
+                option.disabled = false;
+            } else {
+                option.disabled = true;
+            }
+        }
+    } else {
+        // Enable all options for other months
+        for (var i = 0; i < weatherChangesSelect.options.length; i++) {
+            weatherChangesSelect.options[i].disabled = false;
+        }
+    }
+    });
+
     function validateYear() {
         const yearInput = document.getElementById("year");
         const yearPattern = /^\d{4}$/;
