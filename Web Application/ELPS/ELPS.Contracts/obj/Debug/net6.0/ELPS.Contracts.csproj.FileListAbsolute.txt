@@ -1,0 +1,11 @@
+C:\Users\chamindu.s\Documents\Projects\Elephant-Location-Prediction\Web Application\ELPS\ELPS.Contracts\bin\Debug\net6.0\ELPS.Contracts.deps.json
+C:\Users\chamindu.s\Documents\Projects\Elephant-Location-Prediction\Web Application\ELPS\ELPS.Contracts\bin\Debug\net6.0\ELPS.Contracts.dll
+C:\Users\chamindu.s\Documents\Projects\Elephant-Location-Prediction\Web Application\ELPS\ELPS.Contracts\bin\Debug\net6.0\ELPS.Contracts.pdb
+C:\Users\chamindu.s\Documents\Projects\Elephant-Location-Prediction\Web Application\ELPS\ELPS.Contracts\obj\Debug\net6.0\ELPS.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\chamindu.s\Documents\Projects\Elephant-Location-Prediction\Web Application\ELPS\ELPS.Contracts\obj\Debug\net6.0\ELPS.Contracts.AssemblyInfoInputs.cache
+C:\Users\chamindu.s\Documents\Projects\Elephant-Location-Prediction\Web Application\ELPS\ELPS.Contracts\obj\Debug\net6.0\ELPS.Contracts.AssemblyInfo.cs
+C:\Users\chamindu.s\Documents\Projects\Elephant-Location-Prediction\Web Application\ELPS\ELPS.Contracts\obj\Debug\net6.0\ELPS.Contracts.csproj.CoreCompileInputs.cache
+C:\Users\chamindu.s\Documents\Projects\Elephant-Location-Prediction\Web Application\ELPS\ELPS.Contracts\obj\Debug\net6.0\ELPS.Contracts.dll
+C:\Users\chamindu.s\Documents\Projects\Elephant-Location-Prediction\Web Application\ELPS\ELPS.Contracts\obj\Debug\net6.0\refint\ELPS.Contracts.dll
+C:\Users\chamindu.s\Documents\Projects\Elephant-Location-Prediction\Web Application\ELPS\ELPS.Contracts\obj\Debug\net6.0\ELPS.Contracts.pdb
+C:\Users\chamindu.s\Documents\Projects\Elephant-Location-Prediction\Web Application\ELPS\ELPS.Contracts\obj\Debug\net6.0\ref\ELPS.Contracts.dll

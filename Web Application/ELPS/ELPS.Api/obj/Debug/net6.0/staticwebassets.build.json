@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "29OmgIJj4uGSL93r4vcEdOhB8cTzau/qTRx0Gub2xpU=",
+  "Source": "ELPS.Api",
+  "BasePath": "_content/ELPS.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
