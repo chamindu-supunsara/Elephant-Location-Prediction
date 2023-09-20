@@ -1,15 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "WFFHWRP1XuZkBKsD5i0DbUjHn2OMFWOz062diNvcqzOVf0Q8Yt2F59ZFrnCuGYShtHL6ihi3baGnCJvwbM51Yg==",
+  "dgSpecHash": "KhzeGlhvYsAhQnp0RE8cI3bw61YjzSJs1MNqkjdvzLl6RHwBYc2eJNtEIDPBzxfTMm66PcpUvNxLLqYFxBG7aw==",
   "success": true,
   "projectFilePath": "C:\\Users\\chamindu.s\\Documents\\Projects\\Elephant-Location-Prediction\\Web Application\\ELPS\\ELPS.Api\\ELPS.Api.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\chamindu.s\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
-    "C:\\Users\\chamindu.s\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
-    "C:\\Users\\chamindu.s\\.nuget\\packages\\swashbuckle.aspnetcore\\6.5.0\\swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
-    "C:\\Users\\chamindu.s\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.5.0\\swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
-    "C:\\Users\\chamindu.s\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.5.0\\swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
-    "C:\\Users\\chamindu.s\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.5.0\\swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512"
+    "C:\\Users\\chamindu.s\\.nuget\\packages\\microsoft.aspnetcore.spaproxy\\6.0.20\\microsoft.aspnetcore.spaproxy.6.0.20.nupkg.sha512"
   ],
   "logs": []
 }

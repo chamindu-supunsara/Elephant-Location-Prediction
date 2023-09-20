@@ -50,9 +50,9 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
-            "Swashbuckle.AspNetCore": {
+            "Microsoft.AspNetCore.SpaProxy": {
               "target": "Package",
-              "version": "[6.5.0, )"
+              "version": "[6.0.20, )"
             }
           },
           "imports": [
