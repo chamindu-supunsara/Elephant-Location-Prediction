@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "dZm+ASc4fQf0ziNiIwQXLZkNkb+VA1WUtBvrwv+D2YW6fkuOdUsyiEx1jnvnywRVsTFNUaZjIjY+YpqkJgly3w==",
+  "dgSpecHash": "NT8DEL6YUWQSshAKKRnDeDpXTuHCGfRqjejR5IssKJXT15/wDhc1erZ4V2+NuulLaaz3tEWcebUMbYlJ4+ckSw==",
   "success": true,
   "projectFilePath": "C:\\Users\\chamindu.s\\Documents\\Projects\\Elephant-Location-Prediction\\Web Application\\ELPS\\ELPS.Infrastructure\\ELPS.Infrastructure.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\chamindu.s\\.nuget\\packages\\microsoft.aspnetcore.spaproxy\\6.0.20\\microsoft.aspnetcore.spaproxy.6.0.20.nupkg.sha512"
+  ],
   "logs": []
 }

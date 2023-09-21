@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ELPS.Api\ELPS.Api.csproj" />
     <ProjectReference Include="..\ELPS.Application\ELPS.Application.csproj" />
   </ItemGroup>
 

@@ -17,19 +17,6 @@
           "build/Microsoft.AspNetCore.SpaProxy.targets": {}
         }
       },
-      "ELPS.Application/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
-        "dependencies": {
-          "ELPS.Domain": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/ELPS.Application.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/ELPS.Application.dll": {}
-        }
-      },
       "ELPS.Contracts/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -38,29 +25,6 @@
         },
         "runtime": {
           "bin/placeholder/ELPS.Contracts.dll": {}
-        }
-      },
-      "ELPS.Domain/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
-        "compile": {
-          "bin/placeholder/ELPS.Domain.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/ELPS.Domain.dll": {}
-        }
-      },
-      "ELPS.Infrastructure/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
-        "dependencies": {
-          "ELPS.Application": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/ELPS.Infrastructure.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/ELPS.Infrastructure.dll": {}
         }
       }
     }
@@ -81,32 +45,15 @@
         "microsoft.aspnetcore.spaproxy.nuspec"
       ]
     },
-    "ELPS.Application/1.0.0": {
-      "type": "project",
-      "path": "../ELPS.Application/ELPS.Application.csproj",
-      "msbuildProject": "../ELPS.Application/ELPS.Application.csproj"
-    },
     "ELPS.Contracts/1.0.0": {
       "type": "project",
       "path": "../ELPS.Contracts/ELPS.Contracts.csproj",
       "msbuildProject": "../ELPS.Contracts/ELPS.Contracts.csproj"
-    },
-    "ELPS.Domain/1.0.0": {
-      "type": "project",
-      "path": "../ELPS.Domain/ELPS.Domain.csproj",
-      "msbuildProject": "../ELPS.Domain/ELPS.Domain.csproj"
-    },
-    "ELPS.Infrastructure/1.0.0": {
-      "type": "project",
-      "path": "../ELPS.Infrastructure/ELPS.Infrastructure.csproj",
-      "msbuildProject": "../ELPS.Infrastructure/ELPS.Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "ELPS.Application >= 1.0.0",
       "ELPS.Contracts >= 1.0.0",
-      "ELPS.Infrastructure >= 1.0.0",
       "Microsoft.AspNetCore.SpaProxy >= 6.0.20"
     ]
   },
@@ -137,14 +84,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\chamindu.s\\Documents\\Projects\\Elephant-Location-Prediction\\Web Application\\ELPS\\ELPS.Application\\ELPS.Application.csproj": {
-              "projectPath": "C:\\Users\\chamindu.s\\Documents\\Projects\\Elephant-Location-Prediction\\Web Application\\ELPS\\ELPS.Application\\ELPS.Application.csproj"
-            },
             "C:\\Users\\chamindu.s\\Documents\\Projects\\Elephant-Location-Prediction\\Web Application\\ELPS\\ELPS.Contracts\\ELPS.Contracts.csproj": {
               "projectPath": "C:\\Users\\chamindu.s\\Documents\\Projects\\Elephant-Location-Prediction\\Web Application\\ELPS\\ELPS.Contracts\\ELPS.Contracts.csproj"
-            },
-            "C:\\Users\\chamindu.s\\Documents\\Projects\\Elephant-Location-Prediction\\Web Application\\ELPS\\ELPS.Infrastructure\\ELPS.Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\chamindu.s\\Documents\\Projects\\Elephant-Location-Prediction\\Web Application\\ELPS\\ELPS.Infrastructure\\ELPS.Infrastructure.csproj"
             }
           }
         }

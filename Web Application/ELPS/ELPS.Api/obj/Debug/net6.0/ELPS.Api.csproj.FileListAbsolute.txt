@@ -8,14 +8,8 @@ C:\Users\chamindu.s\Documents\Projects\Elephant-Location-Prediction\Web Applicat
 C:\Users\chamindu.s\Documents\Projects\Elephant-Location-Prediction\Web Application\ELPS\ELPS.Api\bin\Debug\net6.0\ELPS.Api.dll
 C:\Users\chamindu.s\Documents\Projects\Elephant-Location-Prediction\Web Application\ELPS\ELPS.Api\bin\Debug\net6.0\ELPS.Api.pdb
 C:\Users\chamindu.s\Documents\Projects\Elephant-Location-Prediction\Web Application\ELPS\ELPS.Api\bin\Debug\net6.0\Microsoft.AspNetCore.SpaProxy.dll
-C:\Users\chamindu.s\Documents\Projects\Elephant-Location-Prediction\Web Application\ELPS\ELPS.Api\bin\Debug\net6.0\ELPS.Application.dll
 C:\Users\chamindu.s\Documents\Projects\Elephant-Location-Prediction\Web Application\ELPS\ELPS.Api\bin\Debug\net6.0\ELPS.Contracts.dll
-C:\Users\chamindu.s\Documents\Projects\Elephant-Location-Prediction\Web Application\ELPS\ELPS.Api\bin\Debug\net6.0\ELPS.Domain.dll
-C:\Users\chamindu.s\Documents\Projects\Elephant-Location-Prediction\Web Application\ELPS\ELPS.Api\bin\Debug\net6.0\ELPS.Infrastructure.dll
-C:\Users\chamindu.s\Documents\Projects\Elephant-Location-Prediction\Web Application\ELPS\ELPS.Api\bin\Debug\net6.0\ELPS.Application.pdb
 C:\Users\chamindu.s\Documents\Projects\Elephant-Location-Prediction\Web Application\ELPS\ELPS.Api\bin\Debug\net6.0\ELPS.Contracts.pdb
-C:\Users\chamindu.s\Documents\Projects\Elephant-Location-Prediction\Web Application\ELPS\ELPS.Api\bin\Debug\net6.0\ELPS.Infrastructure.pdb
-C:\Users\chamindu.s\Documents\Projects\Elephant-Location-Prediction\Web Application\ELPS\ELPS.Api\bin\Debug\net6.0\ELPS.Domain.pdb
 C:\Users\chamindu.s\Documents\Projects\Elephant-Location-Prediction\Web Application\ELPS\ELPS.Api\obj\Debug\net6.0\ELPS.Api.csproj.AssemblyReference.cache
 C:\Users\chamindu.s\Documents\Projects\Elephant-Location-Prediction\Web Application\ELPS\ELPS.Api\obj\Debug\net6.0\spa.proxy.json
 C:\Users\chamindu.s\Documents\Projects\Elephant-Location-Prediction\Web Application\ELPS\ELPS.Api\obj\Debug\net6.0\ELPS.Api.GeneratedMSBuildEditorConfig.editorconfig
