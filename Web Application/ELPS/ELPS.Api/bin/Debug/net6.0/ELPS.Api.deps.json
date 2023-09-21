@@ -8,9 +8,7 @@
     ".NETCoreApp,Version=v6.0": {
       "ELPS.Api/1.0.0": {
         "dependencies": {
-          "ELPS.Application": "1.0.0",
           "ELPS.Contracts": "1.0.0",
-          "ELPS.Infrastructure": "1.0.0",
           "Microsoft.AspNetCore.SpaProxy": "6.0.20"
         },
         "runtime": {
@@ -25,30 +23,9 @@
           }
         }
       },
-      "ELPS.Application/1.0.0": {
-        "dependencies": {
-          "ELPS.Domain": "1.0.0"
-        },
-        "runtime": {
-          "ELPS.Application.dll": {}
-        }
-      },
       "ELPS.Contracts/1.0.0": {
         "runtime": {
           "ELPS.Contracts.dll": {}
-        }
-      },
-      "ELPS.Domain/1.0.0": {
-        "runtime": {
-          "ELPS.Domain.dll": {}
-        }
-      },
-      "ELPS.Infrastructure/1.0.0": {
-        "dependencies": {
-          "ELPS.Application": "1.0.0"
-        },
-        "runtime": {
-          "ELPS.Infrastructure.dll": {}
         }
       }
     }
@@ -66,22 +43,7 @@
       "path": "microsoft.aspnetcore.spaproxy/6.0.20",
       "hashPath": "microsoft.aspnetcore.spaproxy.6.0.20.nupkg.sha512"
     },
-    "ELPS.Application/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
     "ELPS.Contracts/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "ELPS.Domain/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "ELPS.Infrastructure/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
