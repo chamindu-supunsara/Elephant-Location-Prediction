@@ -78,7 +78,7 @@
                             {% if pred_value != 0 %}
                             <p>Grama Niladhari Division : <span id="division">{{pred_value}}</span></p>
                             <p>Elephant Located Area : <span id="locationName">{{ location_info['location_name'] }}</span></p>
-                            <p id="coordinates">{{ location_info['coordinates'][0] }}, {{ location_info['coordinates'][1] }}</p>
+                            <p id="coordinates" style="display: none;">{{ location_info['coordinates'][0] }}, {{ location_info['coordinates'][1] }}</p>
                             {% endif %}
                         </div>
                 </form>
