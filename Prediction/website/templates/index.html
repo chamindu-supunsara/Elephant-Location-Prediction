@@ -67,9 +67,9 @@
                                 <select name="weatherchanges" id="weatherchanges" required>
                                     <option value="" selected hidden>Select</option>
                                     <option value="northeast-monsoon">Northeast-Monsoon</option>
-                                    <option value="first inter-monsoon">First Inter-Monsoon</option>
+                                    <option value="first-inter-monsoon">First Inter-Monsoon</option>
                                     <option value="southwest-monsoon">Southwest-Monsoon</option>
-                                    <option value="second inter-monsoon">Second Inter-Monsoon</option>
+                                    <option value="second-inter-monsoon">Second Inter-Monsoon</option>
                                 </select> 
                             </div>
                         
@@ -77,7 +77,8 @@
                         <div class="result">
                             {% if pred_value != 0 %}
                             <p>Grama Niladhari Division : <span id="division">{{pred_value}}</span></p>
-                            <p>Elephant Located Area : <span id="locationName">{{location_name}}</span></p>
+                            <p>Elephant Located Area : <span id="locationName">{{ location_info['location_name'] }}</span></p>
+                            <p id="coordinates" style="display: none;">{{ location_info['coordinates'][0] }}, {{ location_info['coordinates'][1] }}</p>
                             {% endif %}
                         </div>
                 </form>
@@ -162,11 +163,11 @@
     }
 
     function initMap() {
-        let locationName = "kekirawa";
+        let coordinates = "8.0210, 80.8258";
 
-        const locationNameElement = document.getElementById("locationName");
-        if (locationNameElement) {
-            locationName = locationNameElement.textContent;
+        const coordinatesElement = document.getElementById("coordinates");
+        if (coordinatesElement) {
+            coordinates = coordinatesElement.textContent;
         } else {
             console.log("Default Location is Kekirawa Town");
         }
@@ -181,16 +182,10 @@
         });
 
         const geocoder = new google.maps.Geocoder();
-        geocoder.geocode({ address: locationName }, (results, status) => {
+        geocoder.geocode({ address: coordinates }, (results, status) => {
             if (status === "OK" && results.length > 0) {
                 const location = results[0].geometry.location;
                 map.setCenter(location);
-
-                const marker = new google.maps.Marker({
-                    map: map,
-                    position: location,
-                    title: locationName
-                });
 
                 const radius = 0.015;
                 const numPoints = 50;
@@ -205,11 +200,11 @@
 
                 const locationArea = new google.maps.Polygon({
                     paths: polygonCoordinates,
-                    strokeColor: "#004225", 
-                    strokeOpacity: 0.2,
+                    strokeColor: "#FF0000", 
+                    strokeOpacity: 0.3,
                     strokeWeight: 2,
-                    fillColor: "#004225", 
-                    fillOpacity: 0.15,
+                    fillColor: "#FF0000", 
+                    fillOpacity: 0.25,
                 });
 
                 locationArea.setMap(map);
