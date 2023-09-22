@@ -1,37 +1,11 @@
 {
   "Version": 1,
-  "Hash": "x+5HEQz4zV987XFHHIeSNThjIojpHqrmhVr+OKnTVIk=",
+  "Hash": "29OmgIJj4uGSL93r4vcEdOhB8cTzau/qTRx0Gub2xpU=",
   "Source": "ELPS.Api",
   "BasePath": "_content/ELPS.Api",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [
-    {
-      "Name": "ELPS.Api\\wwwroot",
-      "Source": "ELPS.Api",
-      "ContentRoot": "C:\\Users\\chamindu.s\\Documents\\Projects\\Elephant-Location-Prediction\\Web Application\\ELPS\\ELPS.Api\\wwwroot\\",
-      "BasePath": "_content/ELPS.Api",
-      "Pattern": "**"
-    }
-  ],
-  "Assets": [
-    {
-      "Identity": "C:\\Users\\chamindu.s\\Documents\\Projects\\Elephant-Location-Prediction\\Web Application\\ELPS\\ELPS.Api\\wwwroot\\favicon.ico",
-      "SourceId": "ELPS.Api",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\chamindu.s\\Documents\\Projects\\Elephant-Location-Prediction\\Web Application\\ELPS\\ELPS.Api\\wwwroot\\",
-      "BasePath": "_content/ELPS.Api",
-      "RelativePath": "favicon.ico",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\favicon.ico"
-    }
-  ]
+  "DiscoveryPatterns": [],
+  "Assets": []
 }

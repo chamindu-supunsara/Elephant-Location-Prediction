@@ -1,0 +1,49 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "ELPS.Infrastructure/1.0.0": {
+        "dependencies": {
+          "ELPS.Application": "1.0.0"
+        },
+        "runtime": {
+          "ELPS.Infrastructure.dll": {}
+        }
+      },
+      "ELPS.Application/1.0.0": {
+        "dependencies": {
+          "ELPS.Domain": "1.0.0"
+        },
+        "runtime": {
+          "ELPS.Application.dll": {}
+        }
+      },
+      "ELPS.Domain/1.0.0": {
+        "runtime": {
+          "ELPS.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ELPS.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ELPS.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ELPS.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,1 +1,13 @@
-GET https://localhost:7090/WeatherForecast
+@host=https://localhost:7277
+POST {{host}}/auth/register
+Content-Type: application/json
+
+{
+  "FirstName": "test1",
+  "LastName": "test2",
+  "Email": "test3",
+  "Nic": "test4",
+  "Mobile": "test5",
+  "Address": "test6",
+  "Password": "test7"
+}
