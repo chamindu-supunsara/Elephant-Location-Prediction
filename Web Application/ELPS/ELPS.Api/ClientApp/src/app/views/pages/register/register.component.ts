@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { registerFormPaper } from "src/datamodels/dataentity";
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-register',
@@ -9,7 +10,7 @@ import { registerFormPaper } from "src/datamodels/dataentity";
 })
 export class RegisterComponent implements OnInit {
   repeatPass: string = 'none';
-  constructor() {}
+  constructor(private authService: AuthService) {}
 
   ngOnInit(): void {
   }
@@ -52,11 +53,13 @@ export class RegisterComponent implements OnInit {
   registerSubmit(){
     if(this.Password.value == this.ComPassword.value) {
       this.repeatPass = 'none';
-      console.log("submited");
+
+      this.authService.registerUser().subscribe(res => {
+        console.log(res);
+      })
     } else {
       this.repeatPass = 'inline'
     }
-    //console.log(this.registerForm.value);
   }
 
   get Email(): FormControl {

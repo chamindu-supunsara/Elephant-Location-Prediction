@@ -11,19 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ELPS.Contracts", "ELPS.Cont
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ELPS.Infrastructure", "ELPS.Infrastructure\ELPS.Infrastructure.csproj", "{3BCF12A8-1981-4EC2-9B13-FB6E3E6F0267}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Request", "Request", "{051180A5-8B80-4C57-BA2D-CBC646860066}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Weather", "Weather", "{733B9299-3ABB-4122-95BD-0A820CC05F11}"
-	ProjectSection(SolutionItems) = preProject
-		GetForcasts.http = GetForcasts.http
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{E1A4146F-677E-4307-A110-5DB04EF23034}"
-	ProjectSection(SolutionItems) = preProject
-		Api.md = Api.md
-	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ELPS.Api", "ELPS.Api\ELPS.Api.csproj", "{A8F7A365-9ADE-4DDE-8C2C-B3F61AB8583C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ELPS.Api", "ELPS.Api\ELPS.Api.csproj", "{A8F7A365-9ADE-4DDE-8C2C-B3F61AB8583C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -54,9 +42,6 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{733B9299-3ABB-4122-95BD-0A820CC05F11} = {051180A5-8B80-4C57-BA2D-CBC646860066}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A86F9058-7367-4630-87F3-DBAF68A6C3AA}

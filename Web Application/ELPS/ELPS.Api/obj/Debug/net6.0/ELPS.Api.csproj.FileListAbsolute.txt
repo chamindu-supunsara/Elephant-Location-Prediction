@@ -38,3 +38,10 @@ C:\Users\chamindu.s\Documents\Projects\Elephant-Location-Prediction\Web Applicat
 C:\Users\chamindu.s\Documents\Projects\Elephant-Location-Prediction\Web Application\ELPS\ELPS.Api\obj\Debug\net6.0\ELPS.Api.pdb
 C:\Users\chamindu.s\Documents\Projects\Elephant-Location-Prediction\Web Application\ELPS\ELPS.Api\obj\Debug\net6.0\ELPS.Api.genruntimeconfig.cache
 C:\Users\chamindu.s\Documents\Projects\Elephant-Location-Prediction\Web Application\ELPS\ELPS.Api\obj\Debug\net6.0\ref\ELPS.Api.dll
+C:\Users\chamindu.s\Documents\Projects\Elephant-Location-Prediction\Web Application\ELPS\ELPS.Api\bin\Debug\net6.0\ClientApp\angular.json
+C:\Users\chamindu.s\Documents\Projects\Elephant-Location-Prediction\Web Application\ELPS\ELPS.Api\bin\Debug\net6.0\ClientApp\package-lock.json
+C:\Users\chamindu.s\Documents\Projects\Elephant-Location-Prediction\Web Application\ELPS\ELPS.Api\bin\Debug\net6.0\ClientApp\package.json
+C:\Users\chamindu.s\Documents\Projects\Elephant-Location-Prediction\Web Application\ELPS\ELPS.Api\bin\Debug\net6.0\ClientApp\tsconfig.app.json
+C:\Users\chamindu.s\Documents\Projects\Elephant-Location-Prediction\Web Application\ELPS\ELPS.Api\bin\Debug\net6.0\ClientApp\tsconfig.json
+C:\Users\chamindu.s\Documents\Projects\Elephant-Location-Prediction\Web Application\ELPS\ELPS.Api\bin\Debug\net6.0\ClientApp\tsconfig.spec.json
+C:\Users\chamindu.s\Documents\Projects\Elephant-Location-Prediction\Web Application\ELPS\ELPS.Api\bin\Debug\net6.0\package-lock.json
