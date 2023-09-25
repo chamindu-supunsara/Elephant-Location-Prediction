@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Cors;
+﻿using ELPS.Api.Models;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -10,15 +11,24 @@ namespace ELPS.Api.Controllers
     public class UserController : ControllerBase
     {
         private readonly IConfiguration _config;
-        public UserController(IConfiguration config)
+        public readonly UserContext _context;
+        public UserController(IConfiguration config, UserContext context)
         {
             _config = config;
+            _context = context;
         }
 
         [HttpPost("CreateUser")]
-        public IActionResult Create() 
+        public IActionResult Create(User user) 
         {
-            return Ok("Success from Create Method");
+            if (_context.Users.Where(u => u.Email == user.Email).FirstOrDefault() != null ) 
+            {
+                return Ok("Already Exist");
+            }
+            user.MemberSince = DateTime.Now;
+            _context.Users.Add(user);
+            _context.SaveChanges();
+            return Ok("Success");
         }
     }
 }

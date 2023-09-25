@@ -1,3 +1,7 @@
+<p class="text-center fs-3" [ngClass]="isAccountCreated? 'text-success pb-1' : 'text-danger pb-1'">
+    {{displayMsg}}
+</p>
+
 <form [formGroup]="registerForm" (ngSubmit)="registerSubmit()" action="" class="border p-3 rounded-3">
     <div class="row g-0">
         <div class="col text-center p-2 mb-3 bg-light">
