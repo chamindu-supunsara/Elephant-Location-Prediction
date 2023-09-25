@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { registerFormPaper } from "src/datamodels/dataentity";
 import { AuthService } from '../../services/auth.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-register',
@@ -10,7 +11,10 @@ import { AuthService } from '../../services/auth.service';
 })
 export class RegisterComponent implements OnInit {
   repeatPass: string = 'none';
-  constructor(private authService: AuthService) {}
+  displayMsg: string = "";
+  isAccountCreated: boolean = false;
+
+  constructor(private authService: AuthService, private toastr: ToastrService) {}
 
   ngOnInit(): void {
   }
@@ -54,11 +58,41 @@ export class RegisterComponent implements OnInit {
     if(this.Password.value == this.ComPassword.value) {
       this.repeatPass = 'none';
 
-      this.authService.registerUser().subscribe(res => {
-        console.log(res);
-      })
+      const email = this.registerForm.value.email || ''; // Use an empty string as a default value if it's null or undefined
+      const firstname = this.registerForm.value.firstname || '';
+      const lastName = this.registerForm.value.lastName || '';
+      const mobileNumber = this.registerForm.value.mobileNumber || '';
+      const nic = this.registerForm.value.nic || '';
+      const empNo = this.registerForm.value.empNo || '';
+      const area = this.registerForm.value.area || '';
+      const password = this.registerForm.value.password || '';
+
+  this.authService.registerUser([
+    email,
+    firstname,
+    lastName,
+    mobileNumber,
+    nic,
+    empNo,
+    area,
+    password
+  ]).subscribe(res => {
+        if (res == 'Success') {
+          //this.displayMsg = 'Account Created Successfully';
+          this.isAccountCreated = true;
+          this.toastr.success("Account Created Successfully");
+        } else if (res == 'Already Exist') {
+          //this.displayMsg = 'Account Already Exist. Try Another Email.';
+          this.isAccountCreated = false;
+          this.toastr.warning("Email Already Exist");
+        } else {
+          //this.displayMsg = 'Something Went Wrong.';
+          this.isAccountCreated = false;
+          this.toastr.error("Something Went Wrong");
+        }
+      }); 
     } else {
-      this.repeatPass = 'inline'
+      this.repeatPass = 'inline';
     }
   }
 
