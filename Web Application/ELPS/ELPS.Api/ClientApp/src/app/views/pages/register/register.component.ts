@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { registerFormPaper } from "src/datamodels/dataentity";
 import { AuthService } from '../../services/auth.service';
 import { ToastrService } from 'ngx-toastr';
 
