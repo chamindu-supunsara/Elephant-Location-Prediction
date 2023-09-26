@@ -45,7 +45,7 @@ export class AuthService {
   setToken(token: string) {
     localStorage.setItem("access_token", token);
     this.loadCurrentUser();
-    console.log('JWT Token:', token);
+    //console.log('JWT Token:', token);
   }
 
   loadCurrentUser() {
@@ -61,6 +61,13 @@ export class AuthService {
        area: userInfo.area
     } : null;
     this.currentUser.next(data);
-    console.log(userInfo);
+  }
+
+  isLoggedin(): boolean {
+    return localStorage.getItem("access_token") ? true : false;
+  }
+
+  removeToken() {
+    localStorage.removeItem("access_token");
   }
 }

@@ -12,12 +12,16 @@ import { ToastrModule } from 'ngx-toastr';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatButtonModule } from '@angular/material/button';
 import { LoginComponent } from './views/pages/login/login.component';
+import { PageNotFoundComponent } from './views/pages/page-not-found/page-not-found.component';
+import { HomeComponent } from './views/pages/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    PageNotFoundComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
