@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../../services/auth.service';
 import { ToastrService } from 'ngx-toastr';
+import { BehaviorSubject } from 'rxjs';
 
 @Component({
   selector: 'app-login',
@@ -9,7 +10,6 @@ import { ToastrService } from 'ngx-toastr';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  isUserValid: boolean = false;
   constructor(private loginAuth: AuthService, private toastr: ToastrService) {}
 
   ngOnInit(): void {
@@ -25,6 +25,8 @@ export class LoginComponent implements OnInit {
       Validators.maxLength(15)])
   });
 
+  isUserValid: boolean = false;
+
   loginSubmited() {
     const email = this.loginForm.value.email || '';
     const password = this.loginForm.value.password || '';
@@ -36,10 +38,11 @@ export class LoginComponent implements OnInit {
           this.toastr.error("Login Fail");
         } else {
           this.isUserValid = true;
+          this.loginAuth.setToken(res);
           this.toastr.success("Login Successfully");
         }
       });
-  }  
+  } 
 
   get Email(): FormControl {
     return this.loginForm.get("email") as FormControl;

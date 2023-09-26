@@ -1,4 +1,5 @@
 ﻿using ELPS.Api.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -18,6 +19,7 @@ namespace ELPS.Api.Controllers
             _context = context;
         }
 
+        [AllowAnonymous]
         [HttpPost("CreateUser")]
         public IActionResult Create(User user) 
         {
@@ -31,13 +33,24 @@ namespace ELPS.Api.Controllers
             return Ok("Success");
         }
 
+        [AllowAnonymous]
         [HttpPost("LoginUser")]
         public IActionResult Login(Login user)
         {
             var userAvailable = _context.Users.Where(u => u.Email == user.Email && u.Password == user.Password).FirstOrDefault();
             if (userAvailable != null)
             {
-                return Ok("Success");
+                return Ok(new JwtService(_config).GenerateToken(
+                    userAvailable.UserID.ToString(),
+                    userAvailable.Email,
+                    userAvailable.FirstName,
+                    userAvailable.LastName,
+                    userAvailable.MobileNumber,
+                    userAvailable.Nic,
+                    userAvailable.EmpNo,
+                    userAvailable.Area
+                    )
+                 );
             }
             return Ok("Failure");
         }
