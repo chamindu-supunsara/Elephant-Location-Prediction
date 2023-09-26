@@ -30,5 +30,16 @@ namespace ELPS.Api.Controllers
             _context.SaveChanges();
             return Ok("Success");
         }
+
+        [HttpPost("LoginUser")]
+        public IActionResult Login(Login user)
+        {
+            var userAvailable = _context.Users.Where(u => u.Email == user.Email && u.Password == user.Password).FirstOrDefault();
+            if (userAvailable != null)
+            {
+                return Ok("Success");
+            }
+            return Ok("Failure");
+        }
     }
 }

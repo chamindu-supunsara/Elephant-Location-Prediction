@@ -11,11 +11,13 @@ import { AuthService } from './views/services/auth.service';
 import { ToastrModule } from 'ngx-toastr';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatButtonModule } from '@angular/material/button';
+import { LoginComponent } from './views/pages/login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    RegisterComponent
+    RegisterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
