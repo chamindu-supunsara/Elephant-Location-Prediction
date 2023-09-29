@@ -40,7 +40,7 @@ export class LoginComponent implements OnInit {
         } else {
           this.isUserValid = true;
           this.loginAuth.setToken(res);
-          this.router.navigateByUrl('home')
+          this.router.navigateByUrl('dashboard')
           this.toastr.success("Login Successfully");
         }
       });
