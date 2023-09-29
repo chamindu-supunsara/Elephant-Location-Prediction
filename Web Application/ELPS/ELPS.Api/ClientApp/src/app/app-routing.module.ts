@@ -5,6 +5,11 @@ import { RegisterComponent } from './views/pages/register/register.component';
 import { PageNotFoundComponent } from './views/pages/page-not-found/page-not-found.component';
 import { HomeComponent } from './views/pages/home/home.component';
 import { AuthGuard } from './views/services/auth.guard';
+import { SidenavComponent } from './views/pages/dashboard/sidenav/sidenav.component';
+import { DashboardComponent } from './views/pages/dashboard/dashboard/dashboard.component';
+import { ElephantRecordsComponent } from './views/pages/dashboard/elephant-records/elephant-records.component';
+import { ElephantRegisterComponent } from './views/pages/dashboard/elephant-register/elephant-register.component';
+import { WildOfficersComponent } from './views/pages/dashboard/wild-officers/wild-officers.component';
 
 const routes: Routes = [
   {
@@ -17,12 +22,32 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'login',
+    redirectTo: 'login', // kalin tibbe login
     pathMatch: 'full'
   },
+  // {
+  //   path: 'home',
+  //   component: HomeComponent,
+  //   canActivate: [AuthGuard]
+  // },
   {
-    path: 'home',
-    component: HomeComponent,
+    path: 'dashboard',
+    component: DashboardComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'record',
+    component: ElephantRecordsComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'elephant-register',
+    component: ElephantRegisterComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'officers',
+    component: WildOfficersComponent,
     canActivate: [AuthGuard]
   },
   {

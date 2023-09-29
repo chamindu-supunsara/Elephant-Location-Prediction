@@ -14,6 +14,12 @@ import { MatButtonModule } from '@angular/material/button';
 import { LoginComponent } from './views/pages/login/login.component';
 import { PageNotFoundComponent } from './views/pages/page-not-found/page-not-found.component';
 import { HomeComponent } from './views/pages/home/home.component';
+import { SidenavComponent } from './views/pages/dashboard/sidenav/sidenav.component';
+import { DashboardComponent } from './views/pages/dashboard/dashboard/dashboard.component';
+import { ElephantRecordsComponent } from './views/pages/dashboard/elephant-records/elephant-records.component';
+import { ElephantRegisterComponent } from './views/pages/dashboard/elephant-register/elephant-register.component';
+import { WildOfficersComponent } from './views/pages/dashboard/wild-officers/wild-officers.component';
+import { BodyComponent } from './views/pages/dashboard/body/body.component';
 
 @NgModule({
   declarations: [
@@ -21,11 +27,18 @@ import { HomeComponent } from './views/pages/home/home.component';
     RegisterComponent,
     LoginComponent,
     PageNotFoundComponent,
-    HomeComponent
+    HomeComponent,
+    SidenavComponent,
+    DashboardComponent,
+    ElephantRecordsComponent,
+    ElephantRegisterComponent,
+    WildOfficersComponent,
+    BodyComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
     ReactiveFormsModule,
     FormsModule,
     FormsModule,
