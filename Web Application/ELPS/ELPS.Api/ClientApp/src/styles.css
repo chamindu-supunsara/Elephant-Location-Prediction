@@ -2,6 +2,8 @@
 @import 'ngx-toastr/toastr';
 @import '~@angular/material/prebuilt-themes/indigo-pink.css';
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
 
 * {
     margin: 0;

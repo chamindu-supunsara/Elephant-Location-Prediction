@@ -34,6 +34,10 @@ export class AuthService {
       Password: loginInfo[1]}, {responseType: 'text'});
   }
 
+  getUsers() {
+    return this.http.get(this.baseServerUrl + 'User/GetUsers');
+  }  
+
   recordElephant() {
     return this.http.post(this.baseServerUrl + "User/AddRecord", null, {responseType: 'text'});
   }

@@ -1,1 +1,50 @@
-<p>elephant-records works!</p>
+<h1>Elephant Records</h1>
+<div class="card">
+    <div class="card-head">Records</div>
+    <div class="card-body">
+        <form action="">
+            <div class="row">
+                <div class="col mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name">
+                </div>
+                <div class="col mb-3">
+                    <label for="date" class="form-label">Date</label>
+                    <input type="date" class="form-control" id="date">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col mb-3">
+                    <label for="weather" class="form-label">Weather Condition</label>
+                    <select id="weather" class="form-control">
+                        <option value="0" selected disabled>Choose...</option>
+                        <option>Northeast Monsoon</option>
+                        <option>First Inter Monsoon</option>
+                        <option>Southwest Monsoon</option>
+                        <option>Second Inter Monsoon
+                        </option>
+                    </select>
+                </div>
+                <div class="col mb-3">
+                    <label for="time" class="form-label">Time</label>
+                    <input type="time" class="form-control" id="time">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col mb-3">
+                    <label for="hours" class="form-label">Hours</label>
+                    <input type="number" class="form-control" id="hours">
+                </div>
+                <div class="col mb-3">
+                    <label for="location" class="form-label">Location</label>
+                    <input type="text" class="form-control" id="location">
+                </div>
+            </div>
+
+            <hr>
+            <button type="button" style="float: right; color: white; font-size: 13px; font-weight: 600;" class="btn btn-success pull-right">
+                Submit
+            </button>
+        </form>
+    </div>
+</div>
