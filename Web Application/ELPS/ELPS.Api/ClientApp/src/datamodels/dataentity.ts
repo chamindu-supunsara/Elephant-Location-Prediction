@@ -9,3 +9,14 @@ export class registerFormPaper {
     Password: String="";
     ComPassword: String="";
   }
+
+  export class elephantRecordPaper {
+    Name: String="";
+    Date: String="";
+    WeatherCondition: String="";
+    Time: String="";
+    Hours: String="";
+    Location: String="";
+
+    ElephantRecordsObj: any = [];
+  }
