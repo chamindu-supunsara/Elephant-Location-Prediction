@@ -7,42 +7,101 @@
                 <div class="col mb-3">
                     <label for="name" class="form-label">Name</label>
                     <input type="text" class="form-control" id="name" formControlName="name">
+                    <div class="form-text text-danger" *ngIf="Name.errors?.['required'] && (Name.touched || Name.dirty)">
+                        Elephant Name is Required.
+                    </div>
+                    <div class="form-text text-danger" *ngIf="Name.errors?.['minlength'] && (Name.touched || Name.dirty)">
+                        Name is too Short.
+                    </div>
+                    <div class="form-text text-danger" *ngIf="Name.errors?.['pattern'] && (Name.touched || Name.dirty)">
+                        Name can not type Numbers.
+                    </div>
                 </div>
                 <div class="col mb-3">
                     <label for="date" class="form-label">Date</label>
                     <input type="date" class="form-control" id="date" formControlName="date">
+                    <div class="form-text text-danger" *ngIf="Date.errors?.['required'] && (Date.touched || Date.dirty)">
+                        Date is Required.
+                    </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col mb-3">
-                    <label for="weathercondition" class="form-label">Weather Condition</label>
+                    <label for="weathercondition" class="form-label">Weather Monsoon Condition</label>
                     <select id="weathercondition" class="form-control" formControlName="weathercondition">
-                        <option value="0" selected disabled>Choose...</option>
-                        <option value="Northeast-Monsoon">Northeast Monsoon</option>
-                        <option value="First-Inter-Monsoon">First Inter Monsoon</option>
-                        <option value="SouthwestMonsoon">Southwest Monsoon</option>
-                        <option value="Second-Inter-Monsoon">Second Inter Monsoon</option>
+                        <option value="" selected disabled>Choose...</option>
+                        <option value="Northeast Monsoon">Northeast Monsoon</option>
+                        <option value="First Inter Monsoon">First Inter Monsoon</option>
+                        <option value="Southwest Monsoon">Southwest Monsoon</option>
+                        <option value="Second Inter Monsoon">Second Inter Monsoon</option>
                     </select>
+                    <div class="form-text text-danger" *ngIf="WeatherCondition.errors?.['required'] && (WeatherCondition.touched || WeatherCondition.dirty)">
+                        Weather Condition is Required.
+                    </div>
                 </div>
                 <div class="col mb-3">
                     <label for="time" class="form-label">Time</label>
                     <input type="time" class="form-control" id="time" formControlName="time">
+                    <div class="form-text text-danger" *ngIf="Time.errors?.['required'] && (Time.touched || Time.dirty)">
+                        Time is Required.
+                    </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col mb-3">
                     <label for="hours" class="form-label">Hours</label>
                     <input type="text" class="form-control" id="hours" formControlName="hours">
+                    <div class="form-text text-danger" *ngIf="Hours.errors?.['required'] && (Hours.touched || Hours.dirty)">
+                        Hours is Required.
+                    </div>
+                    <div class="form-text text-danger" *ngIf="Hours.errors?.['pattern'] && (Hours.touched || Hours.dirty)">
+                        Hours can type only Numbers.
+                    </div>
                 </div>
                 <div class="col mb-3">
                     <label for="location" class="form-label">Location</label>
-                    <input type="text" class="form-control" id="location" formControlName="location">
+                    <input type="text" id="location"  class="form-control" formControlName="location">
+                    <div class="form-text text-danger" *ngIf="Location.errors?.['required'] && (Location.touched || Location.dirty)">
+                        Area is Required.
+                    </div>
+                    <div class="form-text text-danger" *ngIf="Location.errors?.['pattern'] && (Location.touched || Location.dirty)">
+                        Not Valid Area.
+                    </div>
                 </div>
             </div>
+
+            <table style="width: 100%;border-width: thin;" >
+                <th style="border-width: thin;font-size: 12px;" class="text-center">Elephant Name</th>
+                <th style="border-width: thin;font-size: 12px;" class="text-center">Date</th>
+                <th style="border-width: thin;font-size: 12px;" class="text-center">Weather Condition</th>
+                <th style="border-width: thin;font-size: 12px;" class="text-center">Time</th>
+                <th style="border-width: thin;font-size: 12px;" class="text-center">Hours</th>
+                <th style="border-width: thin;font-size: 12px;" class="text-center">Location</th>
+                <th style="border-width: thin;font-size: 12px;" class="text-center">Action</th>
+                <tr *ngFor="let data of tblElephantRecords">
+                  <td style="border-width: thin;word-wrap: break-word; font-size: 12px;">{{data.name}}</td>
+                  <td style="border-width: thin;word-wrap: break-word; font-size: 12px;">{{data.date}}</td>
+                  <td style="border-width: thin;word-wrap: break-word; font-size: 12px;">{{data.weathercondition}}</td>
+                  <td style="border-width: thin;word-wrap: break-word; font-size: 12px;">{{data.time}}</td>
+                  <td style="border-width: thin;word-wrap: break-word; font-size: 12px;">{{data.hours}}</td>
+                  <td style="border-width: thin;word-wrap: break-word; font-size: 12px;">{{data.location}}</td>
+                  <td style="border-width: thin;word-wrap: break-word; text-align: center;">
+                    <button type="button" (click)="editELErecord(data)" style="margin-right: 5px; color: white; font-size: 13px; font-weight: 600;" class="btn btn-dark">
+                        <i class="fas fa-check"></i>
+                    </button>
+                    <button type="button" (click)="deleteELErecord(data)" style="margin-right: 5px; color: white; font-size: 13px; font-weight: 600;" class="btn btn-dark">
+                        <i class="fas fa-times"></i>
+                    </button>
+                  </td>
+                </tr>
+            </table>
 
             <hr>
             <button type="submit" [disabled]="registerForm.invalid" style="float: right; color: white; font-size: 13px; font-weight: 600;" class="btn btn-success pull-right">
                 Submit
+            </button>
+            <button type="button" [disabled]="registerForm.invalid" (click)="AddToTable()" style="float: right; margin-right: 5px; color: white; font-size: 13px; font-weight: 600;" class="btn btn-dark">
+                Check
             </button>
         </form>
     </div>

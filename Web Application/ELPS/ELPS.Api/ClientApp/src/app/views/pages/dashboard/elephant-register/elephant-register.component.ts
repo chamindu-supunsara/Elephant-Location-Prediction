@@ -1,6 +1,6 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { AuthService } from 'src/app/views/services/auth.service';
 
@@ -26,10 +26,17 @@ export class ElephantRegisterComponent implements OnInit {
   }
 
   registerForm = new FormGroup({
-    name: new FormControl(""),
-    dob: new FormControl(""),
-    location: new FormControl(""),
-    remark: new FormControl("")
+    name: new FormControl("", [
+      Validators.required, 
+      Validators.minLength(2), 
+      Validators.pattern("^[a-zA-Z]+$")]),
+    dob: new FormControl("", [
+      Validators.required]),
+    location: new FormControl("", [
+      Validators.required,  
+      Validators.pattern(/^(60[5-7]|61[0-9]|62[0-9]|63[0-9]|64[0-9]|65[0-7])$/)]),
+    remark: new FormControl("", [
+      Validators.required])
   });
 
   registerSubmit(){
