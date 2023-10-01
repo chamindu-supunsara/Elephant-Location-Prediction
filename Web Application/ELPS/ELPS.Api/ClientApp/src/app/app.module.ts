@@ -20,6 +20,10 @@ import { ElephantRecordsComponent } from './views/pages/dashboard/elephant-recor
 import { ElephantRegisterComponent } from './views/pages/dashboard/elephant-register/elephant-register.component';
 import { WildOfficersComponent } from './views/pages/dashboard/wild-officers/wild-officers.component';
 import { BodyComponent } from './views/pages/dashboard/body/body.component';
+import { ViewErComponent } from './views/pages/dashboard/view-er/view-er.component';
+import { ViewErecordComponent } from './views/pages/dashboard/view-erecord/view-erecord.component';
+import { SettingsComponent } from './views/pages/dashboard/settings/settings.component';
+import { LocationComponent } from './views/pages/dashboard/location/location.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +38,10 @@ import { BodyComponent } from './views/pages/dashboard/body/body.component';
     ElephantRegisterComponent,
     WildOfficersComponent,
     BodyComponent,
+    ViewErComponent,
+    ViewErecordComponent,
+    SettingsComponent,
+    LocationComponent
   ],
   imports: [
     BrowserModule,

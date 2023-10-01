@@ -1,1 +1,24 @@
-<p>wild-officers works!</p>
+<h1>Wild Officers</h1>
+<div class="card">
+    <div class="card-head">Wild Officers</div>
+    <div class="card-body">
+        <table style="width: 100%;border-width: thin;" >
+            <th style="border-width: thin;font-size: 12px;" class="text-center">Email</th>
+            <th style="border-width: thin;font-size: 12px;" class="text-center">First Name</th>
+            <th style="border-width: thin;font-size: 12px;" class="text-center">Last Name</th>
+            <th style="border-width: thin;font-size: 12px;" class="text-center">Mobile Number</th>
+            <th style="border-width: thin;font-size: 12px;" class="text-center">NIC</th>
+            <th style="border-width: thin;font-size: 12px;" class="text-center">Emp No</th>
+            <th style="border-width: thin;font-size: 12px;" class="text-center">Area</th>
+            <tr *ngFor="let user of users">
+              <td style="border-width: thin;word-wrap: break-word; font-size: 12px;">{{user.email}}</td>
+              <td style="border-width: thin;word-wrap: break-word; font-size: 12px;">{{user.firstName}}</td>
+              <td style="border-width: thin;word-wrap: break-word; font-size: 12px;">{{user.lastName}}</td>
+              <td style="border-width: thin;word-wrap: break-word; font-size: 12px;">{{user.mobileNumber}}</td>
+              <td style="border-width: thin;word-wrap: break-word; font-size: 12px;">{{user.nic}}</td>
+              <td style="border-width: thin;word-wrap: break-word; font-size: 12px;">{{user.empNo}}</td>
+              <td style="border-width: thin;word-wrap: break-word; font-size: 12px;">{{user.area}}</td>
+            </tr>
+        </table>
+    </div>
+</div>

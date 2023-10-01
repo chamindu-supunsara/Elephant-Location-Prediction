@@ -10,6 +10,10 @@ import { DashboardComponent } from './views/pages/dashboard/dashboard/dashboard.
 import { ElephantRecordsComponent } from './views/pages/dashboard/elephant-records/elephant-records.component';
 import { ElephantRegisterComponent } from './views/pages/dashboard/elephant-register/elephant-register.component';
 import { WildOfficersComponent } from './views/pages/dashboard/wild-officers/wild-officers.component';
+import { ViewErComponent } from './views/pages/dashboard/view-er/view-er.component';
+import { ViewErecordComponent } from './views/pages/dashboard/view-erecord/view-erecord.component';
+import { LocationComponent } from './views/pages/dashboard/location/location.component';
+import { SettingsComponent } from './views/pages/dashboard/settings/settings.component';
 
 const routes: Routes = [
   {
@@ -48,6 +52,26 @@ const routes: Routes = [
   {
     path: 'officers',
     component: WildOfficersComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'view-er',
+    component: ViewErComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'view-erecord',
+    component: ViewErecordComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'location',
+    component: LocationComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'settings',
+    component: SettingsComponent,
     canActivate: [AuthGuard]
   },
   {

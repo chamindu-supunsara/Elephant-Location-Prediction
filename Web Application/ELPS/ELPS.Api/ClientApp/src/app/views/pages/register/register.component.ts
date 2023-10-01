@@ -57,7 +57,7 @@ export class RegisterComponent implements OnInit {
     if(this.Password.value == this.ComPassword.value) {
       this.repeatPass = 'none';
 
-      const email = this.registerForm.value.email || ''; // Use an empty string as a default value if it's null or undefined
+      const email = this.registerForm.value.email || '';
       const firstname = this.registerForm.value.firstname || '';
       const lastName = this.registerForm.value.lastName || '';
       const mobileNumber = this.registerForm.value.mobileNumber || '';
@@ -77,15 +77,12 @@ export class RegisterComponent implements OnInit {
     password
   ]).subscribe(res => {
         if (res == 'Success') {
-          //this.displayMsg = 'Account Created Successfully';
           this.isAccountCreated = true;
           this.toastr.success("Account Created Successfully");
         } else if (res == 'Already Exist') {
-          //this.displayMsg = 'Account Already Exist. Try Another Email.';
           this.isAccountCreated = false;
           this.toastr.warning("Email Already Exist");
         } else {
-          //this.displayMsg = 'Something Went Wrong.';
           this.isAccountCreated = false;
           this.toastr.error("Something Went Wrong");
         }

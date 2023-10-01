@@ -2,7 +2,14 @@ import { HttpClient } from '@angular/common/http';
 import { Token } from '@angular/compiler';
 import { Injectable } from '@angular/core';
 import { JwtHelperService } from '@auth0/angular-jwt';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
+
+interface Elephant {
+  name: string;
+  dob: string;
+  location: string;
+  remark: string;
+}
 
 @Injectable({
   providedIn: 'root'
@@ -34,12 +41,52 @@ export class AuthService {
       Password: loginInfo[1]}, {responseType: 'text'});
   }
 
-  recordElephant() {
-    return this.http.post(this.baseServerUrl + "User/AddRecord", null, {responseType: 'text'});
+  getUsers() {
+    return this.http.get(this.baseServerUrl + 'User/GetUsers');
+  }  
+
+  recordElephant(elephantRecords: Array<String>) {
+    return this.http.post(this.baseServerUrl + 'ElephantsRecords/CreateRecord', {
+      Name: elephantRecords[0],
+      Date: elephantRecords[1],
+      WeatherCondition: elephantRecords[2],
+      Time: elephantRecords[3],
+      Hours: elephantRecords[4],
+      Location: elephantRecords[5]}, {responseType: 'text'});
   }
 
-  registerElephant() {
-    return this.http.post(this.baseServerUrl + "User/CreateElephant", null, {responseType: 'text'});
+  getRecord() {
+    return this.http.get(this.baseServerUrl + 'ElephantsRecords/GetRecord');
+  } 
+
+  registerElephant(elephantRegister: Array<String>) {
+    return this.http.post(this.baseServerUrl + "ElephantRegister/CreateElephant", {
+      Name: elephantRegister[0],
+      Dob: elephantRegister[1],
+      Location: elephantRegister[2],
+      Remark: elephantRegister[3]}, {responseType: 'text'});
+  }
+
+  getRegister() {
+    return this.http.get(this.baseServerUrl + 'ElephantRegister/GetElephant');
+  }
+  
+  searchElephantByName(name: string) {
+    return this.http.get(this.baseServerUrl + 'ElephantRegister/SearchElephantByName', {
+      params: { name }
+    });
+  }
+
+  editElephant(elephantEdit: Array<String>) {
+    return this.http.put(this.baseServerUrl + "ElephantRegister/EditElephant", {
+      Name: elephantEdit[0],
+      Dob: elephantEdit[1],
+      Location: elephantEdit[2],
+      Remark: elephantEdit[3]}, {responseType: 'text'});
+  }
+
+  deleteElephant(name: string): Observable<string> {
+    return this.http.delete<string>(`${this.baseServerUrl}ElephantRegister/DeleteElephant?name=${name}`);
   }
 
   setToken(token: string) {

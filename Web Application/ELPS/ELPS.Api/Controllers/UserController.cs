@@ -54,5 +54,12 @@ namespace ELPS.Api.Controllers
             }
             return Ok("Failure");
         }
+
+        [HttpGet("GetUsers")]
+        public IActionResult GetUsers()
+        {
+            var users = _context.Users.ToList();
+            return Ok(users);
+        }
     }
 }
