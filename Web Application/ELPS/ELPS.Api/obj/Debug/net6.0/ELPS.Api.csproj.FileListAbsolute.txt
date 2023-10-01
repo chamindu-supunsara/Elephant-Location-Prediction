@@ -102,3 +102,4 @@ C:\Users\chamindu.s\Documents\Projects\Elephant-Location-Prediction\Web Applicat
 C:\Users\chamindu.s\Documents\Projects\Elephant-Location-Prediction\Web Application\ELPS\ELPS.Api\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
 C:\Users\chamindu.s\Documents\Projects\Elephant-Location-Prediction\Web Application\ELPS\ELPS.Api\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 C:\Users\chamindu.s\Documents\Projects\Elephant-Location-Prediction\Web Application\ELPS\ELPS.Api\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\chamindu.s\Documents\Projects\Elephant-Location-Prediction\Web Application\ELPS\ELPS.Api\bin\Debug\net6.0\libman.json

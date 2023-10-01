@@ -9,17 +9,17 @@
             <th style="border-width: thin;font-size: 12px;" class="text-center">Time</th>
             <th style="border-width: thin;font-size: 12px;" class="text-center">Hours</th>
             <th style="border-width: thin;font-size: 12px;" class="text-center">Location</th>
-            <tr>
-              <td style="border-width: thin;word-wrap: break-word; font-size: 12px;">{{0}}</td>
-              <td style="border-width: thin;word-wrap: break-word; font-size: 12px;">{{0}}</td>
-              <td style="border-width: thin;word-wrap: break-word; font-size: 12px;">{{0}}</td>
-              <td style="border-width: thin;word-wrap: break-word; font-size: 12px;">{{0}}</td>
-              <td style="border-width: thin;word-wrap: break-word; font-size: 12px;">{{0}}</td>
-              <td style="border-width: thin;word-wrap: break-word; font-size: 12px;">{{0}}</td>
+            <tr *ngFor="let record of records">
+              <td style="border-width: thin;word-wrap: break-word; font-size: 12px;">{{record.name}}</td>
+              <td style="border-width: thin;word-wrap: break-word; font-size: 12px;">{{record.date}}</td>
+              <td style="border-width: thin;word-wrap: break-word; font-size: 12px;">{{record.weatherCondition}}</td>
+              <td style="border-width: thin;word-wrap: break-word; font-size: 12px;">{{record.time}}</td>
+              <td style="border-width: thin;word-wrap: break-word; font-size: 12px;">{{record.hours}}</td>
+              <td style="border-width: thin;word-wrap: break-word; font-size: 12px;">{{record.location}}</td>
             </tr>
         </table>
         <hr>
-        <button type="button" style="float: right; color: white; font-size: 13px; font-weight: 600;" class="btn btn-success pull-right">
+        <button type="button" (click)="exportToCSV()" style="float: right; color: white; font-size: 13px; font-weight: 600;" class="btn btn-success pull-right">
             Export CSV
         </button>
     </div>

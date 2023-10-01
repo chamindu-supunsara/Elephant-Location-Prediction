@@ -15,7 +15,6 @@ export class WildOfficersComponent implements OnInit {
     this.authService.getUsers().subscribe(
       (data: any) => {
         this.users = data;
-        console.log(this.users); // Log the data to the console
       },
       error => {
         console.error('Error fetching user data', error);

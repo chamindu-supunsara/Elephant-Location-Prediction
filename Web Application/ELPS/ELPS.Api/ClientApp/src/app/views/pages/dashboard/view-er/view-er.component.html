@@ -7,11 +7,11 @@
             <th style="border-width: thin;font-size: 12px;" class="text-center">Date of Birth</th>
             <th style="border-width: thin;font-size: 12px;" class="text-center">Birth Location</th>
             <th style="border-width: thin;font-size: 12px;" class="text-center">Remark</th>
-            <tr>
-              <td style="border-width: thin;word-wrap: break-word; font-size: 12px;">{{0}}</td>
-              <td style="border-width: thin;word-wrap: break-word; font-size: 12px;">{{0}}</td>
-              <td style="border-width: thin;word-wrap: break-word; font-size: 12px;">{{0}}</td>
-              <td style="border-width: thin;word-wrap: break-word; font-size: 12px;">{{0}}</td>
+            <tr *ngFor="let register of registers">
+              <td style="border-width: thin;word-wrap: break-word; font-size: 12px;">{{register.name}}</td>
+              <td style="border-width: thin;word-wrap: break-word; font-size: 12px;">{{register.dob}}</td>
+              <td style="border-width: thin;word-wrap: break-word; font-size: 12px;">{{register.location}}</td>
+              <td style="border-width: thin;word-wrap: break-word; font-size: 12px;">{{register.remark}}</td>
             </tr>
         </table>
     </div>
