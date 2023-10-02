@@ -3,6 +3,9 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
+using System;
+using System.Linq;
 
 namespace ELPS.Api.Controllers
 {
@@ -12,7 +15,8 @@ namespace ELPS.Api.Controllers
     public class ElephantsRecordsController : ControllerBase
     {
         private readonly IConfiguration _config;
-        public readonly ElephantsRecordsContext _context;
+        private readonly ElephantsRecordsContext _context;
+
         public ElephantsRecordsController(IConfiguration config, ElephantsRecordsContext context)
         {
             _config = config;
@@ -23,26 +27,41 @@ namespace ELPS.Api.Controllers
         [HttpPost("CreateRecord")]
         public IActionResult Create(ElephantsRecords elephantRecords)
         {
-            if (_context.ElephantsRecord.Any(u => u.Name == elephantRecords.Name))
+            try
             {
+                if (_context.ElephantsRecord.Any(u => u.Name == elephantRecords.Name))
+                {
+                    elephantRecords.RecordSince = DateTime.Now;
+                    _context.ElephantsRecord.Add(elephantRecords);
+                    _context.SaveChanges();
+
+                    return Ok("Success");
+                }
+
                 elephantRecords.RecordSince = DateTime.Now;
                 _context.ElephantsRecord.Add(elephantRecords);
                 _context.SaveChanges();
 
                 return Ok("Success");
             }
-            elephantRecords.RecordSince = DateTime.Now;
-            _context.ElephantsRecord.Add(elephantRecords);
-            _context.SaveChanges();
-            return Ok("Success");
+            catch (Exception ex)
+            {
+                return StatusCode(500, "Internal Server Error");
+            }
         }
-
 
         [HttpGet("GetRecord")]
         public IActionResult GetRecord()
         {
-            var records = _context.ElephantsRecord.ToList();
-            return Ok(records);
+            try
+            {
+                var records = _context.ElephantsRecord.ToList();
+                return Ok(records);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, "Internal Server Error");
+            }
         }
     }
 }
