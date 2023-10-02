@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ViewErecordComponent } from './view-erecord.component';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('ViewErecordComponent', () => {
   let component: ViewErecordComponent;
@@ -8,6 +9,7 @@ describe('ViewErecordComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
+      imports: [HttpClientModule],
       declarations: [ViewErecordComponent]
     });
     fixture = TestBed.createComponent(ViewErecordComponent);

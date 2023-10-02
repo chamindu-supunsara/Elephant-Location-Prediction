@@ -1,0 +1,7 @@
+{
+  "ELPS.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\chamindu.s\\Documents\\Projects\\Elephant-Location-Prediction\\Web Application\\ELPS\\ELPS.Api",
+  "ELPS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\chamindu.s\\Documents\\Projects\\Elephant-Location-Prediction\\Web Application\\ELPS\\ELPS.Application",
+  "ELPS.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\chamindu.s\\Documents\\Projects\\Elephant-Location-Prediction\\Web Application\\ELPS\\ELPS.Contracts",
+  "ELPS.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\chamindu.s\\Documents\\Projects\\Elephant-Location-Prediction\\Web Application\\ELPS\\ELPS.Domain",
+  "ELPS.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\chamindu.s\\Documents\\Projects\\Elephant-Location-Prediction\\Web Application\\ELPS\\ELPS.Infrastructure"
+}

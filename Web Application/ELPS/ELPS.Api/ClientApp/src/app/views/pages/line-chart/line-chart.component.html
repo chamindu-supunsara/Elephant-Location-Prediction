@@ -1,0 +1,16 @@
+<ng-container *ngIf="isLoading; else chartData">
+    <div class="loading-spinner">
+    </div>
+</ng-container>
+
+<ng-template #chartData>
+    <div class="chart-wrapper">
+        <canvas
+            baseChart
+            width="430"
+            height="430"
+            type="line"
+            [data]="chartLineData"
+        ></canvas>
+    </div>
+</ng-template>

@@ -1,8 +1,8 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Token } from '@angular/compiler';
 import { Injectable } from '@angular/core';
 import { JwtHelperService } from '@auth0/angular-jwt';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject, Observable, catchError, map, retry, tap, throwError } from 'rxjs';
 
 interface Elephant {
   name: string;
@@ -22,6 +22,43 @@ export class AuthService {
   baseServerUrl = "https://localhost:7277/api/";
 
   jwtHelperService = new JwtHelperService();
+
+  getStatusData(): Observable<string[]> {
+    return this.http
+      .get<any[]>(this.baseServerUrl + "ElephantsRecords/GetRecord")
+      .pipe(
+        retry(1),
+        catchError(error => {
+          let errorMsg: string;
+          if (error.error instanceof ErrorEvent) {
+            errorMsg = `Error: ${error.error.message}`;
+          } else {
+            errorMsg = this.getServerErrorMessage(error);
+          }
+          return throwError(errorMsg);
+        }),
+        map(response => response.map(item => item.weatherCondition))
+      );
+  }
+
+  getBirthData(): Observable<string[]> {
+    return this.http
+      .get<any[]>(this.baseServerUrl + "ElephantRegister/GetElephant")
+      .pipe(
+        retry(1),
+        catchError(error => {
+          let errorMsg: string;
+          if (error.error instanceof ErrorEvent) {
+            errorMsg = `Error: ${error.error.message}`;
+          } else {
+            errorMsg = this.getServerErrorMessage(error);
+          }
+          return throwError(errorMsg);
+        }),
+        map(response => response.map(item => item.location)),
+        tap(data => console.log('Received data:', data))
+      );
+  }
 
   registerUser(user: Array<String>) {
     return this.http.post(this.baseServerUrl + "User/CreateUser", {
@@ -116,5 +153,24 @@ export class AuthService {
 
   removeToken() {
     localStorage.removeItem("access_token");
+  }
+
+  private getServerErrorMessage(error: HttpErrorResponse) {
+    console.log("getServerErrorMessage", error);
+    switch (error.status) {
+      case 404: {
+        return error.error.error;
+      }
+      case 403: {
+        return error.error.error;
+      }
+      case 500: {
+        return error.error.error;
+      }
+      default: {
+        return error.error.error;
+      }
+
+    }
   }
 }

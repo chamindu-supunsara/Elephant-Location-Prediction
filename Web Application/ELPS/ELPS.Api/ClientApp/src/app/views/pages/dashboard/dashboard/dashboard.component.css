@@ -1,0 +1,25 @@
+.card-body {
+    display: flex;
+}
+
+.half-width {
+    flex: 1;
+    padding: 10px; /* Adjust padding as needed */
+}
+
+.chart-section {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.chart-section p {
+    margin-bottom: 5px;
+    font-size: 20px;
+}

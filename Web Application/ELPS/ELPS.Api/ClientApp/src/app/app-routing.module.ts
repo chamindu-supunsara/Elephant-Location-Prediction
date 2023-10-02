@@ -14,6 +14,8 @@ import { ViewErComponent } from './views/pages/dashboard/view-er/view-er.compone
 import { ViewErecordComponent } from './views/pages/dashboard/view-erecord/view-erecord.component';
 import { LocationComponent } from './views/pages/dashboard/location/location.component';
 import { SettingsComponent } from './views/pages/dashboard/settings/settings.component';
+import { DonutChartComponent } from './views/pages/donut-chart/donut-chart.component';
+import { LineChartComponent } from './views/pages/line-chart/line-chart.component';
 
 const routes: Routes = [
   {
