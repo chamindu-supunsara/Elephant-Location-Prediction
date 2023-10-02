@@ -24,6 +24,9 @@ import { ViewErComponent } from './views/pages/dashboard/view-er/view-er.compone
 import { ViewErecordComponent } from './views/pages/dashboard/view-erecord/view-erecord.component';
 import { SettingsComponent } from './views/pages/dashboard/settings/settings.component';
 import { LocationComponent } from './views/pages/dashboard/location/location.component';
+import { NgChartsModule } from 'ng2-charts';
+import { DonutChartComponent } from './views/pages/donut-chart/donut-chart.component';
+import { LineChartComponent } from './views/pages/line-chart/line-chart.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +44,9 @@ import { LocationComponent } from './views/pages/dashboard/location/location.com
     ViewErComponent,
     ViewErecordComponent,
     SettingsComponent,
-    LocationComponent
+    LocationComponent,
+    DonutChartComponent,
+    LineChartComponent
   ],
   imports: [
     BrowserModule,
@@ -50,6 +55,8 @@ import { LocationComponent } from './views/pages/dashboard/location/location.com
     ReactiveFormsModule,
     FormsModule,
     FormsModule,
+    BrowserModule,
+    NgChartsModule,
     MatSnackBarModule,
     MatButtonModule,
     BrowserAnimationsModule,

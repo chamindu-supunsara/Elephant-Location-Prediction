@@ -1,27 +1,31 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from 'src/app/views/services/auth.service';
-import { NgChartsModule } from 'ng2-charts';
+import { AuthService } from '../../services/auth.service';
+import { ChartOptions } from 'chart.js';
 
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css']
+  selector: 'app-donut-chart',
+  templateUrl: './donut-chart.component.html',
+  styleUrls: ['./donut-chart.component.css']
 })
-export class DashboardComponent implements OnInit {
+export class DonutChartComponent implements OnInit {
   isLoading: boolean = true;
 
-  constructor(private authService: AuthService) {
-  }
-
   chartDoughnutData = {
-    labels: ['Northeast Monsoon', 'First Inter Monsoon', 'Southwest Monsoon', 'Second Inter Monsoon'],
+    labels: ['Northeast', 'First Inter', 'Southwest', 'Second Inter'],
     datasets: [
       {
-        backgroundColor: ['#00D8FF', '#41B883', '#E46651', '#FFFF00'],
+        backgroundColor: ['#425F57', '#749F82', '#A8E890', '#CFFF8D'],
         data: [0, 0, 0, 0]
       }
-    ]
+    ],
   };
+
+  chartDoughnutOption: ChartOptions = {
+    responsive: true,
+    maintainAspectRatio: false,
+  };
+
+  constructor(private authService: AuthService) {}
 
   ngOnInit(): void {
     this.loadChartData();
@@ -38,5 +42,4 @@ export class DashboardComponent implements OnInit {
       this.isLoading = false;
     });
   }
-
 }
