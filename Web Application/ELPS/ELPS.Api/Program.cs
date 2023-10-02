@@ -1,3 +1,4 @@
+using ELPS.Api.Middlewares;
 using ELPS.Api.Models;
 using FluentAssertions.Common;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -54,6 +55,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJw
     };
 });
 
+builder.Services.AddTransient<GlobalExceptionMiddleware>();
 
 var app = builder.Build();
 
@@ -63,6 +65,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseMiddleware<GlobalExceptionMiddleware>();
 
 app.UseHttpsRedirection();
 
