@@ -55,8 +55,7 @@ export class AuthService {
           }
           return throwError(errorMsg);
         }),
-        map(response => response.map(item => item.location)),
-        tap(data => console.log('Received data:', data))
+        map(response => response.map(item => item.location))
       );
   }
 
