@@ -1,0 +1,15 @@
+C:\Users\chamindu.s\Documents\Projects\Elephant-Location-Prediction\Web Application\ELPS\ELPS.Application\bin\Release\net6.0\ELPS.Application.deps.json
+C:\Users\chamindu.s\Documents\Projects\Elephant-Location-Prediction\Web Application\ELPS\ELPS.Application\bin\Release\net6.0\ELPS.Application.dll
+C:\Users\chamindu.s\Documents\Projects\Elephant-Location-Prediction\Web Application\ELPS\ELPS.Application\bin\Release\net6.0\ELPS.Application.pdb
+C:\Users\chamindu.s\Documents\Projects\Elephant-Location-Prediction\Web Application\ELPS\ELPS.Application\bin\Release\net6.0\ELPS.Domain.dll
+C:\Users\chamindu.s\Documents\Projects\Elephant-Location-Prediction\Web Application\ELPS\ELPS.Application\bin\Release\net6.0\ELPS.Domain.pdb
+C:\Users\chamindu.s\Documents\Projects\Elephant-Location-Prediction\Web Application\ELPS\ELPS.Application\obj\Release\net6.0\ELPS.Application.csproj.AssemblyReference.cache
+C:\Users\chamindu.s\Documents\Projects\Elephant-Location-Prediction\Web Application\ELPS\ELPS.Application\obj\Release\net6.0\ELPS.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\chamindu.s\Documents\Projects\Elephant-Location-Prediction\Web Application\ELPS\ELPS.Application\obj\Release\net6.0\ELPS.Application.AssemblyInfoInputs.cache
+C:\Users\chamindu.s\Documents\Projects\Elephant-Location-Prediction\Web Application\ELPS\ELPS.Application\obj\Release\net6.0\ELPS.Application.AssemblyInfo.cs
+C:\Users\chamindu.s\Documents\Projects\Elephant-Location-Prediction\Web Application\ELPS\ELPS.Application\obj\Release\net6.0\ELPS.Application.csproj.CoreCompileInputs.cache
+C:\Users\chamindu.s\Documents\Projects\Elephant-Location-Prediction\Web Application\ELPS\ELPS.Application\obj\Release\net6.0\ELPS.Application.csproj.CopyComplete
+C:\Users\chamindu.s\Documents\Projects\Elephant-Location-Prediction\Web Application\ELPS\ELPS.Application\obj\Release\net6.0\ELPS.Application.dll
+C:\Users\chamindu.s\Documents\Projects\Elephant-Location-Prediction\Web Application\ELPS\ELPS.Application\obj\Release\net6.0\refint\ELPS.Application.dll
+C:\Users\chamindu.s\Documents\Projects\Elephant-Location-Prediction\Web Application\ELPS\ELPS.Application\obj\Release\net6.0\ELPS.Application.pdb
+C:\Users\chamindu.s\Documents\Projects\Elephant-Location-Prediction\Web Application\ELPS\ELPS.Application\obj\Release\net6.0\ref\ELPS.Application.dll

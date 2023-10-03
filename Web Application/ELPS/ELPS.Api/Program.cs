@@ -18,7 +18,7 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowOrigin", builder =>
     {
-        builder.WithOrigins("http://localhost:4200")
+        builder.WithOrigins("https://wildofficedashboard.azurewebsites.net")
                .AllowAnyMethod()
                .AllowAnyHeader();
     });
@@ -75,6 +75,8 @@ app.Use(async (context, next) =>
         throw;
     }
 });
+
+app.UseHsts();
 
 app.UseHttpsRedirection();
 

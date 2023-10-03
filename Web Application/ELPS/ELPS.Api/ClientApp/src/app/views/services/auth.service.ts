@@ -20,6 +20,7 @@ export class AuthService {
 
   currentUser: BehaviorSubject<any> = new BehaviorSubject(null);
   baseServerUrl = "https://localhost:7277/api/";
+  // baseServerUrl = "https://wildapiservice.azurewebsites.net/api/";
 
   jwtHelperService = new JwtHelperService();
 
