@@ -1,0 +1,28 @@
+Product projects
+---------------------------------------
+
+
+Test projects
+---------------------------------------
+C:\Users\chamindu.s\Documents\Projects\Elephant-Location-Prediction\Web Application\ELPS\ELPS.Api\ELPS.Api.csproj
+C:\Users\chamindu.s\Documents\Projects\Elephant-Location-Prediction\Web Application\ELPS\ELPS_UnitTest\ELPS_UnitTest.csproj
+
+
+Invalid projects
+---------------------------------------
+{none}
+
+
+Skipped projects
+---------------------------------------
+C:\Users\chamindu.s\Documents\Projects\Elephant-Location-Prediction\Web Application\ELPS\ELPS.Contracts\ELPS.Contracts.csproj
+C:\Users\chamindu.s\Documents\Projects\Elephant-Location-Prediction\Web Application\ELPS\ELPS.Domain\ELPS.Domain.csproj
+C:\Users\chamindu.s\Documents\Projects\Elephant-Location-Prediction\Web Application\ELPS\ELPS.Application\ELPS.Application.csproj
+C:\Users\chamindu.s\Documents\Projects\Elephant-Location-Prediction\Web Application\ELPS\ELPS.Infrastructure\ELPS.Infrastructure.csproj
+
+
+Excluded projects
+---------------------------------------
+{none}
+
+

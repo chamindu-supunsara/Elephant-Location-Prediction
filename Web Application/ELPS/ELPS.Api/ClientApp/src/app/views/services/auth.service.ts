@@ -20,6 +20,7 @@ export class AuthService {
 
   currentUser: BehaviorSubject<any> = new BehaviorSubject(null);
   baseServerUrl = "https://localhost:7277/api/";
+  // baseServerUrl = "https://wildapiservice.azurewebsites.net/api/";
 
   jwtHelperService = new JwtHelperService();
 
@@ -55,8 +56,7 @@ export class AuthService {
           }
           return throwError(errorMsg);
         }),
-        map(response => response.map(item => item.location)),
-        tap(data => console.log('Received data:', data))
+        map(response => response.map(item => item.location))
       );
   }
 

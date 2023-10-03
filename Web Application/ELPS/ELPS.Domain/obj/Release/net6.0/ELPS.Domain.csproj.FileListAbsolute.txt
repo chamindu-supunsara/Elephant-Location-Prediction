@@ -1,0 +1,11 @@
+C:\Users\chamindu.s\Documents\Projects\Elephant-Location-Prediction\Web Application\ELPS\ELPS.Domain\bin\Release\net6.0\ELPS.Domain.deps.json
+C:\Users\chamindu.s\Documents\Projects\Elephant-Location-Prediction\Web Application\ELPS\ELPS.Domain\bin\Release\net6.0\ELPS.Domain.dll
+C:\Users\chamindu.s\Documents\Projects\Elephant-Location-Prediction\Web Application\ELPS\ELPS.Domain\bin\Release\net6.0\ELPS.Domain.pdb
+C:\Users\chamindu.s\Documents\Projects\Elephant-Location-Prediction\Web Application\ELPS\ELPS.Domain\obj\Release\net6.0\ELPS.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\chamindu.s\Documents\Projects\Elephant-Location-Prediction\Web Application\ELPS\ELPS.Domain\obj\Release\net6.0\ELPS.Domain.AssemblyInfoInputs.cache
+C:\Users\chamindu.s\Documents\Projects\Elephant-Location-Prediction\Web Application\ELPS\ELPS.Domain\obj\Release\net6.0\ELPS.Domain.AssemblyInfo.cs
+C:\Users\chamindu.s\Documents\Projects\Elephant-Location-Prediction\Web Application\ELPS\ELPS.Domain\obj\Release\net6.0\ELPS.Domain.csproj.CoreCompileInputs.cache
+C:\Users\chamindu.s\Documents\Projects\Elephant-Location-Prediction\Web Application\ELPS\ELPS.Domain\obj\Release\net6.0\ELPS.Domain.dll
+C:\Users\chamindu.s\Documents\Projects\Elephant-Location-Prediction\Web Application\ELPS\ELPS.Domain\obj\Release\net6.0\refint\ELPS.Domain.dll
+C:\Users\chamindu.s\Documents\Projects\Elephant-Location-Prediction\Web Application\ELPS\ELPS.Domain\obj\Release\net6.0\ELPS.Domain.pdb
+C:\Users\chamindu.s\Documents\Projects\Elephant-Location-Prediction\Web Application\ELPS\ELPS.Domain\obj\Release\net6.0\ref\ELPS.Domain.dll
