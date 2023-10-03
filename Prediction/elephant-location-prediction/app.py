@@ -2,11 +2,12 @@ from flask import Flask, render_template, request
 import sklearn
 import pickle
 import numpy as np
+import os
 
 app = Flask(__name__)
 
 def prediction(lst):
-    filename = 'model\Elephant_Location.pickle'
+    filename = os.path.join(os.path.dirname(__file__), 'model', 'Elephant_Location.pickle')
     with open(filename, 'rb') as file:
         model = pickle.load(file)
     pred_value = model.predict([lst])

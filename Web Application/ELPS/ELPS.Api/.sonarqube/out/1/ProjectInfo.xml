@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProjectInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sonarsource.com/msbuild/integration/2015/1">
+  <ProjectName>ELPS.Contracts</ProjectName>
+  <ProjectLanguage>C#</ProjectLanguage>
+  <ProjectType>Product</ProjectType>
+  <ProjectGuid>e2f9e73b-2433-4e11-99b6-19e57aef789f</ProjectGuid>
+  <FullPath>C:\Users\chamindu.s\Documents\Projects\Elephant-Location-Prediction\Web Application\ELPS\ELPS.Contracts\ELPS.Contracts.csproj</FullPath>
+  <IsExcluded>false</IsExcluded>
+  <AnalysisResults />
+  <AnalysisSettings>
+    <Property Name="sonar.cs.roslyn.reportFilePaths">C:\Users\chamindu.s\Documents\Projects\Elephant-Location-Prediction\Web Application\ELPS\ELPS.Api\.sonarqube\out\1\Issues.json</Property>
+    <Property Name="sonar.cs.analyzer.projectOutPaths">C:\Users\chamindu.s\Documents\Projects\Elephant-Location-Prediction\Web Application\ELPS\ELPS.Api\.sonarqube\out\1</Property>
+  </AnalysisSettings>
+  <Configuration>Debug</Configuration>
+  <Platform>AnyCPU</Platform>
+  <TargetFramework>net6.0</TargetFramework>
+</ProjectInfo>
