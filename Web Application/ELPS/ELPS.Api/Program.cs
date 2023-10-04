@@ -14,15 +14,15 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddCors(options =>
-{
-    options.AddPolicy("AllowOrigin", builder =>
-    {
-        builder.WithOrigins("https://wildofficedashboard.azurewebsites.net")
-               .AllowAnyMethod()
-               .AllowAnyHeader();
-    });
-});
+// builder.Services.AddCors(options =>
+// {
+//     options.AddPolicy("AllowOrigin", builder =>
+//     {
+//         builder.WithOrigins("https://wildofficedashboard.azurewebsites.net")
+//                .AllowAnyMethod()
+//                .AllowAnyHeader();
+//     });
+// });
 
 builder.Services.AddDbContext<UserContext>(options =>
 {
@@ -76,6 +76,8 @@ app.Use(async (context, next) =>
     }
 });
 
+app.UseRouting();
+
 app.UseHsts();
 
 app.UseHttpsRedirection();
@@ -86,6 +88,6 @@ app.UseAuthentication();
 
 app.MapControllers();
 
-app.UseCors("AllowOrigin");
+app.UseCors(m => m.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());;
 
 app.Run();
