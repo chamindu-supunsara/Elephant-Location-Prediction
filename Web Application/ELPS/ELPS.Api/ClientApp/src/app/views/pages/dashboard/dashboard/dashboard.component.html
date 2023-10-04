@@ -1,4 +1,15 @@
-<h2>Welcome to Wild Office System</h2>
+<h2>WELCOME</h2>
+
+<div class="card">
+    <div class="card-head">News</div>
+    <div class="card-body">
+        <p>Immerse in nature's magic with our Elephant Location Prediction at Kekirawa Wild
+           Office! Using advanced tech, we ensure majestic creatures' safety, fostering harmony 
+           between humans and wildlife. Join us on this journey where science meets nature for a 
+           sustainable future. Let's save the Elephants
+        </p>
+    </div>
+</div>
 
 <div class="card">
     <div class="card-head">Dashboard</div>
@@ -17,12 +28,30 @@
         </div>
     </div>
 </div>
+
 <div class="card">
-    <div class="card-head">Trackers</div>
+    <div class="card-head">Officers List</div>
     <div class="card-body">
-        
+        <h6>This Device Can't Open Tables</h6>
+        <table style="width: 100%;border-width: thin;" >
+            <th style="border-width: thin;font-size: 12px;" class="text-center">Email</th>
+            <th style="border-width: thin;font-size: 12px;" class="text-center">First Name</th>
+            <th style="border-width: thin;font-size: 12px;" class="text-center">Last Name</th>
+            <th style="border-width: thin;font-size: 12px;" class="text-center">Mobile Number</th>
+            <th style="border-width: thin;font-size: 12px;" class="text-center">NIC</th>
+            <th style="border-width: thin;font-size: 12px;" class="text-center">Emp No</th>
+            <th style="border-width: thin;font-size: 12px;" class="text-center">Area</th>
+            <tr *ngFor="let user of users">
+              <td style="border-width: thin;word-wrap: break-word; font-size: 12px;">{{user.email}}</td>
+              <td style="border-width: thin;word-wrap: break-word; font-size: 12px;">{{user.firstName}}</td>
+              <td style="border-width: thin;word-wrap: break-word; font-size: 12px;">{{user.lastName}}</td>
+              <td style="border-width: thin;word-wrap: break-word; font-size: 12px;">{{user.mobileNumber}}</td>
+              <td style="border-width: thin;word-wrap: break-word; font-size: 12px;">{{user.nic}}</td>
+              <td style="border-width: thin;word-wrap: break-word; font-size: 12px;">{{user.empNo}}</td>
+              <td style="border-width: thin;word-wrap: break-word; font-size: 12px;">{{user.area}}</td>
+            </tr>
+        </table>
     </div>
 </div>
-
 
 

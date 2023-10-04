@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../../services/auth.service';
 import { ToastrService } from 'ngx-toastr';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -13,7 +14,7 @@ export class RegisterComponent implements OnInit {
   displayMsg: string = "";
   isAccountCreated: boolean = false;
 
-  constructor(private authService: AuthService, private toastr: ToastrService) {}
+  constructor(private authService: AuthService, private toastr: ToastrService, private router: Router) {}
 
   ngOnInit(): void {
   }
@@ -78,6 +79,7 @@ export class RegisterComponent implements OnInit {
   ]).subscribe(res => {
         if (res == 'Success') {
           this.isAccountCreated = true;
+          this.router.navigateByUrl('login')
           this.toastr.success("Account Created Successfully");
         } else if (res == 'Already Exist') {
           this.isAccountCreated = false;

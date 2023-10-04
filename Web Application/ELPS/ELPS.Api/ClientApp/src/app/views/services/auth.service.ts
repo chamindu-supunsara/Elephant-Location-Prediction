@@ -19,8 +19,8 @@ export class AuthService {
   constructor(private http: HttpClient) { }
 
   currentUser: BehaviorSubject<any> = new BehaviorSubject(null);
-  baseServerUrl = "https://localhost:7277/api/";
-  // baseServerUrl = "https://wildapiservice.azurewebsites.net/api/";
+  //baseServerUrl = "https://localhost:7277/api/";
+  baseServerUrl = "https://elephnatapi.azurewebsites.net/api/";
 
   jwtHelperService = new JwtHelperService();
 

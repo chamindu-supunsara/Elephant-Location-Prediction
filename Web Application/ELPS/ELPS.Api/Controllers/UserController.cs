@@ -11,7 +11,7 @@ namespace ELPS.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [EnableCors("AllowOrigin")]
+    //[EnableCors("AllowOrigin")]
     public class UserController : ControllerBase
     {
         private readonly IConfiguration _config;
