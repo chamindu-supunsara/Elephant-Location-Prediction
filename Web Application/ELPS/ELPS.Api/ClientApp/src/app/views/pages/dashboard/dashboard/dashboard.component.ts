@@ -9,6 +9,7 @@ import { NgChartsModule } from 'ng2-charts';
 })
 export class DashboardComponent implements OnInit {
   isLoading: boolean = true;
+  users: any[] = [];
 
   constructor(private authService: AuthService) {
   }
@@ -25,6 +26,14 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit(): void {
     this.loadChartData();
+    this.authService.getUsers().subscribe(
+      (data: any) => {
+        this.users = data;
+      },
+      error => {
+        console.error('Error fetching user data', error);
+      }
+    );
   }
 
   loadChartData() {

@@ -19,10 +19,19 @@ interface ElephantResponse {
 export class ElephantRegisterComponent implements OnInit {
   isAccountCreated: boolean = false;
   editingMode: boolean = false;
+  registers: any[] = [];
 
   constructor(private authService: AuthService, private toastr: ToastrService) {}
 
   ngOnInit(): void {
+    this.authService.getRegister().subscribe(
+      (data: any) => {
+        this.registers = data;
+      },
+      error => {
+        console.error('Error fetching user data', error);
+      }
+    );
   }
 
   registerForm = new FormGroup({
@@ -54,7 +63,15 @@ export class ElephantRegisterComponent implements OnInit {
           if (res == 'Success') {
             this.isAccountCreated = true;
             this.toastr.success("Elephant Register Successfully");
-            this.resetForm();
+            this.authService.getRegister().subscribe(
+              (data: any) => {
+                this.registers = data;
+                this.resetForm();
+              },
+              error => {
+                console.error('Error fetching user data', error);
+              }
+            );
           } else if (res == 'Already Exist') {
             this.isAccountCreated = false;
             this.toastr.warning("Name Already Exist");
@@ -106,7 +123,15 @@ export class ElephantRegisterComponent implements OnInit {
           if (res == 'Success') {
             this.isAccountCreated = true;
             this.toastr.success("Edit Successfully");
-            this.resetForm();
+            this.authService.getRegister().subscribe(
+              (data: any) => {
+                this.registers = data;
+                this.resetForm();
+              },
+              error => {
+                console.error('Error fetching user data', error);
+              }
+            );
           } else if (res == 'Elephant not found') {
             this.isAccountCreated = false;
             this.toastr.warning("Name can't Change");
@@ -131,7 +156,15 @@ export class ElephantRegisterComponent implements OnInit {
       },
       (error) => {
         this.toastr.success("Deleted successfully");
-        this.resetForm();
+        this.authService.getRegister().subscribe(
+          (data: any) => {
+            this.registers = data;
+            this.resetForm();
+          },
+          error => {
+            console.error('Error fetching user data', error);
+          }
+        );
       }
     );
   }

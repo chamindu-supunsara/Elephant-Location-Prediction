@@ -75,6 +75,33 @@ export class ElephantRecordsComponent implements OnInit {
     this.tableUpdated = false;
   }
 
+  registerSubmitMobile() {
+    const name = this.registerForm.value.name || '';
+    const date = this.registerForm.value.date || '';
+    const weatherCondition = this.registerForm.value.weathercondition || '';
+    const time = this.registerForm.value.time || '';
+    const hours = this.registerForm.value.hours || '';
+    const location = this.registerForm.value.location || '';
+
+    this.authService.recordElephant([
+        name,
+        date,
+        weatherCondition,
+        time,
+        hours,
+        location
+    ]).subscribe(res => {
+        if (res === 'Success') {
+            this.isAccountCreated = true;
+            this.toastr.success("Record Added Successfully");
+            this.resetForm();
+        } else {
+            this.isAccountCreated = false;
+            this.toastr.error("Something Went Wrong");
+        }
+    });
+}
+
   AddToTable() {
     const newRecord = {
       name: this.registerForm.value.name,

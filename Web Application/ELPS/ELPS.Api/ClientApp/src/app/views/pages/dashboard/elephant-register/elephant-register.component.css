@@ -1,4 +1,19 @@
-/* styles.css */
+.chart-section {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.chart-section p {
+    margin-bottom: 5px;
+    font-size: 20px;
+}
 
 table {
     width: 100%;
@@ -20,4 +35,33 @@ th {
 
 tr:hover {
     background-color: #f5f5f5;
+}
+@media screen and (max-width: 820px) {
+    table {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 820px) {
+    h6 {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .chart-section {
+        display: inline-block;
+    }
+}
+
+@media screen and (max-width: 820px) {
+    #webSearchBtn {
+        display: none;
+    }
+    #webEditBtn {
+        display: none;
+    }
+    #webDelBtn {
+        display: none;
+    }
 }

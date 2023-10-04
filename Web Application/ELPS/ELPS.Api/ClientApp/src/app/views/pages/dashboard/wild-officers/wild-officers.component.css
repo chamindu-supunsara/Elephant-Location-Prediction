@@ -21,3 +21,14 @@ th {
 tr:hover {
     background-color: #f5f5f5;
 }
+@media screen and (max-width: 820px) {
+    table {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 820px) {
+    h6 {
+        display: none;
+    }
+}

@@ -97,11 +97,14 @@
             </table>
 
             <hr>
-            <button type="submit" [disabled]="registerForm.invalid" style="float: right; color: white; font-size: 13px; font-weight: 600;" class="btn btn-success pull-right">
+            <button type="submit" [disabled]="registerForm.invalid" id="webSubmitBtn" style="float: right; color: white; font-size: 13px; font-weight: 600;" class="btn btn-success pull-right">
                 Submit
             </button>
-            <button type="button" [disabled]="registerForm.invalid" (click)="AddToTable()" style="float: right; margin-right: 5px; color: white; font-size: 13px; font-weight: 600;" class="btn btn-dark">
+            <button type="button" [disabled]="registerForm.invalid" (click)="AddToTable()" id="webCheckBtn" style="float: right; margin-right: 5px; color: white; font-size: 13px; font-weight: 600;" class="btn btn-dark">
                 Check
+            </button>
+            <button type="button" [disabled]="registerForm.invalid" (click)="registerSubmitMobile()" id="mobileBtn" style="float: right; margin-right: 5px; color: white; font-size: 13px; font-weight: 600;" class="btn btn-success">
+                Submit
             </button>
         </form>
     </div>
