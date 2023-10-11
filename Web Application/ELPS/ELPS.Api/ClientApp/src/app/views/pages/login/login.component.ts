@@ -27,8 +27,11 @@ export class LoginComponent implements OnInit {
   });
 
   isUserValid: boolean = false;
+  loading: boolean = false;
 
   loginSubmited() {
+    this.loading = true;
+    
     const email = this.loginForm.value.email || '';
     const password = this.loginForm.value.password || '';
   
