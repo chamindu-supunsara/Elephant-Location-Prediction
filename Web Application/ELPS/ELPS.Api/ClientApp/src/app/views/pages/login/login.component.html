@@ -32,7 +32,10 @@
     <div class="row">
         <div class="col-6 offset-3">
             <div class="d-grid">
-                <button type="submit" [disabled]="loginForm.invalid" class="btn btn-dark">LOGIN</button>
+                <button type="submit" [disabled]="loading || loginForm.invalid" class="btn btn-dark">
+                    <span *ngIf="loading" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                    {{ loading ? 'Logging in...' : 'LOGIN' }}
+                </button>
             </div>
         </div>
     </div>

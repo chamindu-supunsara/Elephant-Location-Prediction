@@ -13,6 +13,7 @@ export class RegisterComponent implements OnInit {
   repeatPass: string = 'none';
   displayMsg: string = "";
   isAccountCreated: boolean = false;
+  loading: boolean = false;
 
   constructor(private authService: AuthService, private toastr: ToastrService, private router: Router) {}
 
@@ -55,6 +56,8 @@ export class RegisterComponent implements OnInit {
   });
 
   registerSubmit(){
+    this.loading = true;
+    
     if(this.Password.value == this.ComPassword.value) {
       this.repeatPass = 'none';
 
